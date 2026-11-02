@@ -1,0 +1,68 @@
+<div class="hero-review-marquee" role="img" aria-label="Google, Yelp, BBB and Nextdoor">
+            <div class="hero-review-track" aria-hidden="true">
+              {[0, 1].map(() => (
+                <div class="hero-review-group">
+                  <span class="hero-review-slot"><svg class="hero-review-logo hero-review-google" viewBox="30 35 239 80" aria-hidden="true"><image href="/assets/review-logos/google-logo-0-e1749568991681.png" width="300" height="150" /></svg></span>
+                  <span class="hero-review-slot"><img class="hero-review-logo hero-review-yelp" src="/assets/review-logos/yelp-white.svg" alt="" width="100" height="45" /></span>
+                  <span class="hero-review-slot"><svg class="hero-review-logo hero-review-bbb" viewBox="109 16 82 119" aria-hidden="true"><image href="/assets/review-logos/bbb-thea.png" width="300" height="150" /></svg></span>
+                  <span class="hero-review-slot"><svg class="hero-review-logo hero-review-nextdoor" viewBox="30 54 240 41" aria-hidden="true"><image href="/assets/review-logos/nextdoor-thea.png" width="300" height="150" /></svg></span>
+                </div>
+              ))}
+            </div>
+          </div>
+<style>
+    .hero-review-marquee { display: none; }
+    @media (max-width: 1200px) {
+      :global(.hero-review-description) { display: none !important; }
+      :global(.hero-text-block) { min-width: 0; width: 100%; }
+      .hero-review-marquee {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        background: transparent;
+        container-type: inline-size;
+        padding: 16px 0;
+      }
+      .hero-review-track {
+        display: flex;
+        width: max-content;
+        animation: hero-review-scroll 20s linear infinite;
+      }
+      .hero-review-group {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        min-width: 100cqw;
+        justify-content: space-around;
+        gap: 20px;
+        padding-right: 20px;
+      }
+      .hero-review-slot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 132px;
+        height: 64px;
+        flex: 0 0 auto;
+      }
+      .hero-review-logo {
+        display: block;
+        width: 108px;
+        height: 36px;
+        filter: brightness(0) invert(1);
+        overflow: hidden;
+      }
+      .hero-review-yelp { width: 100px; height: 45px; filter: none; }
+      .hero-review-bbb { width: 43px; height: 61px; }
+      .hero-review-nextdoor { width: 132px; height: 28px; }
+    }
+    @keyframes hero-review-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-review-track { animation: none; }
+      .hero-review-marquee { overflow-x: auto; }
+    }
+
+</style>

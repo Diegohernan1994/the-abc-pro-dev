@@ -1,0 +1,59 @@
+:root{
+/* ── Brand palette (exact swatches from the brand board) ── */
+--abc-yellow:#FDBD2E;
+--abc-purple:#612086;
+--abc-plum:#271D3E;
+--abc-tan:#BDA478;
+
+/* ── Applied purple. The board states 612086, but every heading, link and
+      accent in the live layouts is drawn at rgb(122,63,150). Use --abc-purple-ink
+      for type and UI; reserve --abc-purple for the logo and large flat fills. ── */
+--abc-purple-ink:#7A3F96;
+--abc-purple-24:rgba(122,63,150,0.24);
+
+/* ── Neutrals, taken verbatim from the file ── */
+--abc-ink:#5D5D5D;
+--abc-ink-strong:#2D2D2D;
+--abc-black:#000000;
+--abc-gray-777:#777777;
+--abc-gray-6e:#6E6E6E;
+--abc-gray-8f:#8F8F8F;
+--abc-gray-b2:#B2B2B2;
+--abc-line:#B5BCC0;
+--abc-line-soft:#DDDDDD;
+--abc-surface-muted:#EFEFEF;
+--abc-surface-stone:#E5E3DF;
+--abc-white:#FFFFFF;
+
+/* ── Semantic aliases ── */
+--text-body:var(--abc-ink);
+--text-heading:var(--abc-ink);
+--text-accent:var(--abc-purple-ink);
+--text-muted:var(--abc-gray-777);
+--text-nav:var(--abc-gray-6e);
+--text-on-dark:rgba(255,255,255,0.95);
+--text-inverse:var(--abc-white);
+
+--surface-page:var(--abc-white);
+--surface-card:var(--abc-white);
+--surface-dark:var(--abc-plum);
+--surface-accent:var(--abc-purple-ink);
+--surface-gold:var(--abc-tan);
+--surface-scrim:rgba(255,255,255,0.88);
+
+--border-input:var(--abc-line);
+--border-hairline:var(--abc-line);
+--border-ghost:var(--abc-gray-777);
+
+--action-primary-bg:var(--abc-tan);
+--action-primary-fg:var(--abc-white);
+--action-secondary-bg:var(--abc-purple-ink);
+--action-secondary-fg:var(--abc-white);
+--action-ghost-fg:var(--abc-gray-777);
+--action-ghost-border:var(--abc-gray-777);
+
+--link:var(--abc-purple-ink);
+--link-hover:var(--abc-purple);
+}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-hover);text-decoration:underline}

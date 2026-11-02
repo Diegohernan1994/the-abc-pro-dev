@@ -1,0 +1,35 @@
+:root{
+--font-display:"Noto Serif","Noto Serif Display",ui-serif,Georgia,"Times New Roman",serif;
+--font-body:Lato,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+/* Icon families are served by the cdnjs Font Awesome 6.5.2 stylesheet imported in
+   tokens/fonts.css — verified rendering, no local binaries required. */
+--font-icon:"Font Awesome 6 Free","Font Awesome 5 Free";
+--font-icon-brand:"Font Awesome 6 Brands","Font Awesome 5 Brands";
+
+/* Scale as specified on the brand board: H1 Noto Serif 50, H2 Noto Serif 32, Text Lato 16 */
+--fs-h1:50px;   --lh-h1:60px; /* @kind font */   --fw-h1:400; /* @kind font */
+--fs-h2:32px;   --lh-h2:36px; /* @kind font */   --fw-h2:400; /* @kind font */
+--fs-h3:30px;   --lh-h3:43px; /* @kind font */   --fw-h3:400; /* @kind font */
+--fs-h4:24px;   --lh-h4:1.05; /* @kind font */   --fw-h4:400; /* @kind font */
+--fs-h5:19.46px;--lh-h5:20.43px; /* @kind font */
+--fs-lead:18px; --lh-lead:27px; /* @kind font */
+--fs-body:16px; --lh-body:22.5px; /* @kind font */
+--fs-quote-attr:17px;--lh-quote-attr:25.5px; /* @kind font */
+--fs-eyebrow:20px;--lh-eyebrow:1.2; /* @kind font */
+--fs-button:15px;--lh-button:50px; /* @kind font */
+--fs-small:15px;--lh-small:22px; /* @kind font */
+--fs-caption:13px;
+
+/* Letterspacing */
+--ls-button:0.300em; /* @kind font */   /* uppercase CTA labels */
+--ls-nav:0.100em; /* @kind font */      /* uppercase nav items */
+--ls-license:0.180em; /* @kind font */  /* footer CSLB lockup */
+
+--fw-light:300; /* @kind font */
+--fw-regular:400; /* @kind font */
+--fw-medium:500; /* @kind font */
+--fw-semibold:600; /* @kind font */
+--fw-bold:700; /* @kind font */
+--fw-extrabold:800; /* @kind font */
+--fw-black:900; /* @kind font */
+}

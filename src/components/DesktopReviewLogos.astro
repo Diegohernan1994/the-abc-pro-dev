@@ -1,0 +1,15 @@
+<div class="desktop-review-logos" role="img" aria-label="Google, Yelp, BBB and Nextdoor"><span class="desktop-review-slot"><svg class="desktop-review-logo desktop-review-google" viewBox="30 35 239 80" aria-hidden="true"><image href="/assets/review-logos/google-logo-0-e1749568991681.png" width="300" height="150" /></svg></span>
+<span class="desktop-review-slot"><img class="desktop-review-logo desktop-review-yelp" src="/assets/review-logos/yelp-white.svg" alt="" width="100" height="45" /></span>
+<span class="desktop-review-slot"><svg class="desktop-review-logo desktop-review-bbb" viewBox="109 16 82 119" aria-hidden="true"><image href="/assets/review-logos/bbb-thea.png" width="300" height="150" /></svg></span>
+<span class="desktop-review-slot"><svg class="desktop-review-logo desktop-review-nextdoor" viewBox="30 54 240 41" aria-hidden="true"><image href="/assets/review-logos/nextdoor-thea.png" width="300" height="150" /></svg></span></div>
+<style>
+.desktop-review-logos { display: none; }
+@media (min-width: 1201px) {
+ .desktop-review-logos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; gap: 20px; width: 100%; max-width: 580px; margin-top: 8px; }
+ .desktop-review-slot { display: flex; align-items: center; justify-content: center; min-width: 0; height: 60px; }
+ .desktop-review-logo { display: block; width: 100px; max-width: 100%; height: 34px; filter: brightness(0) invert(1); overflow: hidden; }
+ .desktop-review-yelp { width: 96px; height: 43px; filter: none; object-fit: contain; }
+ .desktop-review-bbb { width: 40px; height: 58px; }
+ .desktop-review-nextdoor { width: 122px; height: 26px; }
+}
+</style>

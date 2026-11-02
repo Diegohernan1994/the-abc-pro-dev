@@ -1,0 +1,313 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout 
+  title="Thank You | Abraham Building & Consulting" 
+  description="Thank you for reaching out to Abraham Building & Consulting. We have received your consultation request and our team will contact you shortly."
+  preloadImage="/assets/general/hero.webp"
+>
+  <div class="thank-you-wrapper">
+    <!-- Background image with luxury brand overlay -->
+    <div class="thank-you-bg"></div>
+    <div class="thank-you-overlay"></div>
+
+    <div class="thank-you-container">
+      
+      <!-- Top Brand Header -->
+      <header class="thank-you-header">
+        <a href={base ? `${base}/` : '/'} class="thank-you-logo-link">
+          <img 
+            src="/assets/logo-abc-pro.webp" 
+            alt="Abraham Building & Consulting" 
+            class="thank-you-logo"
+            width="120"
+            height="82"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </a>
+      </header>
+
+      <!-- Main Content Card -->
+      <main class="thank-you-card">
+        <span class="thank-you-eyebrow">Request Received</span>
+        
+        <h1 class="thank-you-title">Thank You for Reaching Out</h1>
+        
+        <div class="thank-you-divider"></div>
+        
+        <p class="thank-you-description">
+          We have received your project details. One of our remodeling specialists will review your information and get in touch with you shortly to discuss your ideas, answer your questions, and coordinate your free consultation.
+        </p>
+
+        <!-- Immediate Contact Section -->
+        <div class="thank-you-action-block">
+          <span class="thank-you-call-label">Need immediate assistance?</span>
+          <a href="tel:8184573390" class="thank-you-phone-btn">
+            Call (818) 457-3390
+          </a>
+        </div>
+
+        <!-- Back to Home Link -->
+        <div class="thank-you-back-wrap">
+          <a href={base ? `${base}/` : '/'} class="thank-you-back-link">
+            Return to Homepage
+          </a>
+        </div>
+      </main>
+
+      <!-- Bottom Footer -->
+      <footer class="thank-you-footer">
+        <span>Abraham Building &amp; Consulting © 2026</span>
+        <span class="footer-dot">•</span>
+        <span>CSLB License #1046696</span>
+        <span class="footer-dot">•</span>
+        <span>Los Angeles, CA</span>
+      </footer>
+
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .thank-you-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #271D3E;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .thank-you-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/assets/general/hero.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  .thank-you-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(39, 29, 62, 0.88) 0%, rgba(20, 14, 32, 0.94) 100%);
+    z-index: 2;
+  }
+
+  .thank-you-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 860px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0 auto;
+    padding: 36px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .thank-you-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12px;
+  }
+
+  .thank-you-logo-link {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .thank-you-logo {
+    width: 110px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .thank-you-card {
+    width: 100%;
+    max-width: 680px;
+    padding: 40px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    margin: 20px 0;
+  }
+
+  .thank-you-eyebrow {
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #FDBD2E;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .thank-you-title {
+    margin: 0;
+    font-family: 'Noto Serif', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(28px, 4.4vw, 44px);
+    line-height: 1.18;
+    color: #ffffff;
+    text-wrap: pretty;
+  }
+
+  .thank-you-divider {
+    width: 54px;
+    height: 2px;
+    background-color: #BDA478;
+    margin: 22px auto 24px;
+  }
+
+  .thank-you-description {
+    margin: 0 0 32px;
+    font-family: Lato, sans-serif;
+    font-size: clamp(15px, 2vw, 17px);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 580px;
+    text-wrap: pretty;
+  }
+
+  .thank-you-action-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .thank-you-call-label {
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+  }
+
+  .thank-you-phone-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 0 44px;
+    background-color: #BDA478;
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    box-sizing: border-box;
+  }
+
+  .thank-you-phone-btn:hover {
+    background-color: #7A3F96;
+  }
+
+  .thank-you-back-wrap {
+    margin-top: 4px;
+  }
+
+  .thank-you-back-link {
+    font-family: Lato, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.70);
+    text-decoration: underline;
+    transition: color 200ms ease;
+  }
+
+  .thank-you-back-link:hover {
+    color: #FDBD2E;
+  }
+
+  .thank-you-footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: Lato, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.55);
+    padding-top: 12px;
+  }
+
+  .footer-dot {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: 600px) {
+    .thank-you-container {
+      padding: 24px 16px;
+    }
+
+    .thank-you-logo {
+      width: 96px;
+    }
+
+    .thank-you-card {
+      padding: 30px 18px;
+      margin: 12px 0;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .thank-you-title {
+      font-size: 26px;
+      line-height: 1.2;
+    }
+
+    .thank-you-description {
+      font-size: 14.5px;
+      line-height: 1.55;
+      margin-bottom: 24px;
+    }
+
+    .thank-you-phone-btn {
+      width: 100%;
+      padding: 0 20px;
+      font-size: 13px;
+    }
+
+    .thank-you-footer {
+      font-size: 11px;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-dot {
+      display: none;
+    }
+  }
+</style>

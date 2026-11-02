@@ -1,0 +1,337 @@
+---
+import '../styles/tokens.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  preloadImage?: string;
+  disableGTM?: boolean;
+}
+
+const { 
+  title = "The ABC Pro | Abraham Building & Consulting", 
+  description = "Licensed General Contractor in Los Angeles. Quality home additions, kitchen, bathroom, and full home remodeling.",
+  preloadImage,
+  disableGTM = false
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {!disableGTM && (
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MZHKXQ22');</script>
+    <!-- End Google Tag Manager -->
+  )}
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/webp" href="/assets/logo-abc-pro.webp" />
+
+  {preloadImage && (
+    <link rel="preload" as="image" href={preloadImage} type="image/webp" fetchpriority="high" />
+  )}
+
+  <!-- Preconnect to Font & Icon CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- Asynchronous Font Awesome & Google Fonts (Zero render blocking) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+  <script is:inline>
+    // Fallback script ensuring styles apply
+    (function() {
+      var links = [
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
+        'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap'
+      ];
+      links.forEach(function(href) {
+        var existing = document.querySelector('link[href="' + href + '"]');
+        if (existing && existing.rel !== 'stylesheet') {
+          existing.rel = 'stylesheet';
+        }
+      });
+    })();
+  </script>
+
+  <style is:inline>
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      font-family: Lato, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #5D5D5D;
+      -webkit-font-smoothing: antialiased;
+      border-radius: 0 !important;
+      -webkit-border-radius: 0 !important;
+      overflow-x: clip !important;
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      position: relative;
+    }
+    #main-content {
+      overflow-x: clip !important;
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      position: relative;
+    }
+    @media (max-width: 1200px) {
+      p, h1, h2, h3, h4, span, a, button, input, textarea {
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+      }
+
+      /* MOBILE CTA BUTTONS: Keep text and arrow tightly paired and centered */
+      a[href="#lead-form"]:not(.video-card-link),
+      .btn-gold-cta,
+      .btn-purple-submit,
+      .cta-gold-btn,
+      .cta-purple-btn,
+      .btn-schedule-cta,
+      .btn-rather-talk {
+        max-width: calc(100% - 32px) !important;
+        width: auto !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+        letter-spacing: 0.10em !important;
+        font-size: clamp(12px, 3.2vw, 13.5px) !important;
+        height: auto !important;
+        min-height: 50px !important;
+        padding-top: 11px !important;
+        padding-bottom: 11px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 8px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+      }
+      a[href="#lead-form"]:not(.video-card-link) span,
+      .btn-gold-cta span,
+      .btn-purple-submit span,
+      .cta-gold-btn span,
+      .cta-purple-btn span,
+      .btn-schedule-cta span {
+        display: inline !important;
+        text-align: center !important;
+        white-space: normal !important;
+      }
+      a[href="#lead-form"]:not(.video-card-link) i,
+      .btn-gold-cta i,
+      .btn-purple-submit i,
+      .cta-gold-btn i,
+      .cta-purple-btn i,
+      .btn-schedule-cta i {
+        flex-shrink: 0 !important;
+        margin-left: 6px !important;
+        display: inline-block !important;
+        vertical-align: middle !important;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .top-nav-bar,
+    .top-nav-bar *,
+    header,
+    nav {
+      border-radius: 0 !important;
+      -webkit-border-radius: 0 !important;
+    }
+    details > summary {
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+    details[open] .faq-plus {
+      transform: rotate(45deg);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .form-row-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+      width: 100%;
+    }
+    @media (max-width: 360px) {
+      .form-row-2col {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+  {!disableGTM && (
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZHKXQ22"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  )}
+
+  <main id="main-content" role="main">
+    <slot />
+  </main>
+
+  <!-- UNIVERSAL SECURE LEAD FORM HANDLER -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Smooth scroll for buttons linking to #lead-form
+      document.querySelectorAll('a[href^="#lead-form"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.querySelector('#lead-form') || document.querySelector('.hero-form-card');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const firstInput = target.querySelector('input:not([type="hidden"])');
+            if (firstInput) setTimeout(() => firstInput.focus(), 400);
+          }
+        });
+      });
+
+      // 2. Universal Secure Lead Form Handler
+      const forms = document.querySelectorAll('form.hero-form-card, form#lead-form, form[data-landing]');
+      forms.forEach(form => {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+          const existingError = form.querySelector('.form-error-msg');
+          if (existingError) existingError.remove();
+
+          // Gather form values
+          const firstNameInput = form.querySelector('input[name="first_name"]');
+          const lastNameInput = form.querySelector('input[name="last_name"]');
+          const nameInput = form.querySelector('input[name="name"]');
+          const phoneInput = form.querySelector('input[name="phone"]');
+          const emailInput = form.querySelector('input[name="email"]');
+          const zipInput = form.querySelector('input[name="zip"]');
+          const messageInput = form.querySelector('textarea[name="message"], input[name="message"]');
+          const areasInput = form.querySelector('select[name="areas"]');
+
+          const firstName = firstNameInput ? firstNameInput.value.trim() : '';
+          const lastName = lastNameInput ? lastNameInput.value.trim() : '';
+          let name = nameInput ? nameInput.value.trim() : '';
+          if (!name && (firstName || lastName)) {
+            name = `${firstName} ${lastName}`.trim();
+          }
+
+          const phone = phoneInput ? phoneInput.value.trim() : '';
+          const email = emailInput ? emailInput.value.trim() : '';
+          const zip = zipInput ? zipInput.value.trim() : '';
+          const message = messageInput ? messageInput.value.trim() : '';
+          const areas = areasInput ? areasInput.value.trim() : '';
+
+          let landing = form.getAttribute('data-landing') || '';
+          if (!landing) {
+            const path = window.location.pathname.toLowerCase();
+            if (path.includes('kitchen')) landing = 'kitchen';
+            else if (path.includes('bath')) landing = 'bathroom';
+            else if (path.includes('addition')) landing = 'additions';
+            else if (path.includes('3d') || path.includes('plan')) landing = '3d-design';
+            else landing = 'general-remodeling';
+          }
+
+          const payload = {
+            first_name: firstName,
+            last_name: lastName,
+            name: name,
+            phone: phone,
+            email: email,
+            zip: zip,
+            message: message,
+            areas: areas,
+            landing: landing,
+            full_url: window.location.href,
+            timestamp: new Date().toISOString()
+          };
+
+          // UI Loading state
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            submitBtn.style.cursor = 'not-allowed';
+            submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;justify-content:center;gap:8px"><i class="fa-solid fa-spinner fa-spin"></i> Submitting...</span>';
+          }
+
+          try {
+            // Determine proxy endpoint (production or remote live domain)
+            const endpoint = (window.location.hostname.includes('github.io') || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+              ? 'https://theabcpro.com/api/submit-lead.php'
+              : '/api/submit-lead.php';
+
+            let response;
+            try {
+              response = await fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+              });
+            } catch (networkErr) {
+              // Fallback to relative endpoint if CORS or remote fails
+              if (endpoint !== '/api/submit-lead.php') {
+                response = await fetch('/api/submit-lead.php', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(payload)
+                });
+              } else {
+                throw networkErr;
+              }
+            }
+
+            const result = await response.json().catch(() => ({}));
+
+            if (response && response.ok && result.success !== false) {
+              const thankYouUrl = window.location.pathname.startsWith('/the-abc-pro-dev') 
+                ? '/the-abc-pro-dev/thank-you/' 
+                : '/thank-you/';
+              window.location.href = thankYouUrl;
+            } else {
+              throw new Error(result.error || 'Server returned an error');
+            }
+          } catch (err) {
+            console.error('Lead submission error:', err);
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.style.opacity = '1';
+              submitBtn.style.cursor = 'pointer';
+              submitBtn.innerHTML = originalBtnHtml;
+            }
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'form-error-msg';
+            errorDiv.style.cssText = 'margin-top:10px;padding:12px;background:#fde8e8;color:#9b1c1c;font-size:13px;line-height:18px;border-radius:4px;text-align:center;border:1px solid #f8b4b4;';
+            errorDiv.innerHTML = 'Unable to send request right now. Please call us directly at <a href="tel:8184573390" style="color:#9b1c1c;font-weight:700;text-decoration:underline">(818) 457-3390</a>.';
+            form.appendChild(errorDiv);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

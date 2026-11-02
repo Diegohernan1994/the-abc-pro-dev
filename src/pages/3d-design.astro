@@ -1,0 +1,838 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ReviewLogoCarousel from '../components/ReviewLogoCarousel.astro';
+import DesktopReviewLogos from '../components/DesktopReviewLogos.astro';
+import TrustBar from '../components/TrustBar.jsx';
+import CardCarousel from '../components/CardCarousel.jsx';
+import QuestionsCarousel from '../components/QuestionsCarousel.jsx';
+import ProcessTimeline from '../components/ProcessTimeline.jsx';
+import GalleryGrid from '../components/GalleryGrid.jsx';
+import TestimonialsCarousel from '../components/TestimonialsCarousel.jsx';
+import BeforeAfterSlider from '../components/BeforeAfterSlider.jsx';
+
+const trustItems = [
+  { icon: 'fa-solid fa-house-chimney-window', lines: ['3D Design', 'Visualization'] },
+  { icon: 'fa-solid fa-shield-halved', lines: ['CSLB License', '#1046696'] },
+  { icon: 'fa-solid fa-people-group', lines: ['Family-Owned', '& Managed'] },
+  { icon: 'fa-solid fa-award', lines: ['20+ Years of', 'Industry Experience'] },
+];
+
+const benefitCards = [
+  {
+    icon: 'fa-solid fa-magnifying-glass',
+    title: 'Start with the problem, not the product',
+    description: 'Explain what is not working in your home before you decide that a certain layout, finish, or trend is the answer.'
+  },
+  {
+    icon: 'fa-solid fa-cube',
+    title: 'Make the idea easier to evaluate',
+    description: '3D visualization helps you see the direction more clearly before you move into construction.'
+  },
+  {
+    icon: 'fa-solid fa-clipboard-check',
+    title: 'Understand the planning path',
+    description: 'Design, drawings, code requirements, permits, and inspections can vary by scope and property. We will discuss the questions that should be answered for your project.'
+  },
+  {
+    icon: 'fa-solid fa-people-arrows',
+    title: 'Avoid decision handoffs without context',
+    description: 'Begin with a team that takes your project through an in-person meeting, design, final selections, construction, and final walkthrough.'
+  }
+];
+
+const questionsData = [
+  {
+    question: '“Could this layout work better?”',
+    answer: 'Discuss the way you use the room and the changes you are considering.'
+  },
+  {
+    question: '“What should I decide before I get bids?”',
+    answer: 'Identify the scope, priorities, visual direction, and project information that need to be clarified.'
+  },
+  {
+    question: '“Do I need plans or permits?”',
+    answer: 'Review the general planning questions; specific requirements depend on the scope and jurisdiction.'
+  },
+  {
+    question: '“I already have plans. What now?”',
+    answer: 'Bring them to the conversation so the project context and next steps can be discussed.'
+  }
+];
+
+const processSteps = [
+  {
+    number: '01',
+    title: 'Meet and Define the Goal',
+    text: 'We meet in person to discuss your vision, needs, budget considerations, property location, and the decisions that feel unresolved.',
+    image: '/assets/additions/step-01.webp'
+  },
+  {
+    number: '02',
+    title: 'Visualize and Finalize',
+    text: '3D visualization helps create a clear preview. The project direction, plans, and material selections are finalized before construction moves forward.',
+    image: '/assets/additions/step-02.webp'
+  },
+  {
+    number: '03',
+    title: 'Build and Walk Through',
+    text: 'Construction proceeds from the approved project plan, followed by a final walkthrough when the work is complete.',
+    image: '/assets/additions/step-03.webp'
+  }
+];
+
+const galleryPhotos = [
+  '/assets/kitchen/k01-clean.webp?v=2k',
+  '/assets/general/bathroom-3d.webp?v=2k-ultra',
+  '/assets/general/backyard-pool.webp?v=2k',
+  '/assets/general/g06.webp?v=2k',
+  '/assets/general/g04.webp?v=2k',
+  '/assets/kitchen/k11.webp?v=2k'
+];
+
+const testimonialsData = [
+  {
+    author: 'Michael Minson',
+    location: '',
+    quote: "We didn't know exactly what we wanted so they helped us with a design. The kitchen came out perfect as a design and I really like my new custom cabinets! ... Everything was handled professionally.",
+    quoteColor: '#7A3F96',
+    closeQuoteColor: '#DDDDDD',
+    sourceLogo: '/assets/google-logo.svg',
+    sourceName: 'Google Reviews',
+    sourceText: 'published Google My Business review'
+  },
+  {
+    author: 'Celio B.',
+    location: '',
+    quote: "From the initial consultation through the design phase, to the finishing touches—Rani was on top of it! ... They brought ideas to the table that we hadn't considered for our kitchen remodel.",
+    quoteColor: '#BDA478',
+    closeQuoteColor: '#7A3F96',
+    sourceLogo: '/assets/google-logo.svg',
+    sourceName: 'Google Reviews',
+    sourceText: 'published Google My Business review'
+  }
+];
+---
+
+<Layout 
+  title="Remodeling Plans & Design in Los Angeles | The ABC Pro" 
+  description="Move beyond inspiration with 3D design that helps you see the right direction before construction starts. CSLB License #1046696."
+  preloadImage="/assets/general/plans-hero.webp"
+>
+  
+  <!-- STICKY TOP CALL BAR -->
+  <div class="top-nav-bar" style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);border-bottom:1px solid #B5BCC0;display:flex;align-items:center;gap:24px;padding:10px 40px;box-shadow:0 1px 4px -1px rgba(0,0,0,0.12);border-radius:0">
+    <img src="/assets/logo-abc-pro.webp" alt="Abraham Building & Consulting" class="nav-logo" width="107" height="73" style="width:107px;height:73px;object-fit:contain;display:block;flex-shrink:0;border-radius:0" />
+    <a href="tel:8184573390" class="nav-phone-text" style="margin-left:auto;font-family:'Noto Serif',Georgia,serif;font-size:21px;color:#7A3F96;text-decoration:none;white-space:nowrap">(818) 457-3390</a>
+    <a href="tel:8184573390" class="nav-call-btn" style="display:inline-flex;align-items:center;justify-content:center;gap:11px;height:44px;padding:0 42px;background:#7A3F96;color:#fff;font-weight:600;font-size:13px;letter-spacing:0.300em;text-transform:uppercase;text-decoration:none;white-space:nowrap;flex-shrink:0;border-radius:0">
+      <i class="fa-solid fa-phone" aria-hidden="true" style="font-size:13px"></i>
+      <span>Call Now</span>
+    </a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" style="position:relative;min-height:560px;display:grid;place-items:center;overflow:hidden;width:100%">
+    <!-- Desktop Background -->
+    <div class="hero-desktop-bg" style="position:absolute;inset:0;background:#271D3E url(/assets/general/plans-hero.webp) center / cover no-repeat"></div>
+    <div class="hero-overlay" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.42) 0%,rgba(0,0,0,0.62) 100%)"></div>
+
+    <!-- Mobile-Only Hero Image (Strictly at very top per Documento sin título.md) -->
+    <div class="hero-mobile-image-wrap">
+      <img 
+        src="/assets/general/plans-hero.webp" 
+        alt="Remodeling Plans & Design in Los Angeles" 
+        class="hero-mobile-img" 
+        width="1200" 
+        height="675" 
+        loading="eager" 
+        fetchpriority="high" 
+        decoding="async" 
+      />
+    </div>
+
+    <div class="hero-container" style="position:relative;max-width:900px;padding:96px 40px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;box-sizing:border-box;width:100%">
+      <div class="hero-text-block" style="display:flex;flex-direction:column;align-items:center;gap:22px;width:100%">
+        <span class="hero-eyebrow" style="font-weight:900;font-size:13px;letter-spacing:0.300em;text-transform:uppercase;color:#FDBD2E">Turn Ideas Into a Clear Direction</span>
+        <h1 class="hero-title" style="margin:0;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:clamp(34px,4.6vw,54px);line-height:1.1;color:#fff;text-wrap:pretty">Remodeling Plans &amp; Design in Los Angeles</h1>
+        <p class="hero-review-description hero-description" style="margin:0;max-width:660px;font-size:18px;line-height:28px;color:rgba(255,255,255,0.92);text-wrap:pretty">
+          Move beyond inspiration with <strong style="font-weight:700;color:#FDBD2E">3D design</strong> that helps you see the right direction before construction starts.
+        </p>
+          <ReviewLogoCarousel />
+
+        <!-- Desktop Two Buttons -->
+        <div class="hero-desktop-buttons" style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:6px">
+          <a href="tel:8184573390" class="btn-outline-white" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;height:46px;padding:0 26px;background:transparent;color:#fff;font-weight:600;font-size:12px;letter-spacing:0.220em;text-transform:uppercase;text-decoration:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.72);transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
+            <i class="fa-solid fa-phone" aria-hidden="true" style="font-size:13px"></i>
+            <span>Call (818) 457-3390</span>
+          </a>
+          <a href="#lead-form" class="cta-gold-btn" style="display:inline-flex;align-items:center;justify-content:center;gap:11px;height:46px;padding:0 30px;background:#BDA478;color:#fff;font-weight:600;font-size:12px;letter-spacing:0.220em;text-transform:uppercase;text-decoration:none;transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
+            <span>Get My Free Planning Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
+          </a>
+        </div>
+        <DesktopReviewLogos />
+
+        <!-- Mobile Call Button (Strictly below text in mobile Hero per Documento sin título.md) -->
+        <div class="hero-mobile-call-wrap">
+          <a href="tel:8184573390" class="btn-mobile-call">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <span>Call (818) 457-3390</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile-Only Form (Strictly below text & button in Hero per Documento sin título.md) -->
+      <div class="hero-mobile-form-wrap">
+        <form class="hero-form-card" data-landing="3d-design" style="background:#F6F4F1;box-shadow:inset 0 0 0 1px #DDDDDD;box-sizing:border-box;padding:34px 32px 30px;display:flex;flex-direction:column;gap:11px;text-align:left;width:100%">
+          <h2 style="margin:0 0 4px;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:25px;line-height:31px;color:#7A3F96">Get My Free Planning Consultation</h2>
+          <div class="form-row-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:11px;width:100%">
+            <input required placeholder="First Name" aria-label="First Name" name="first_name" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+            <input required placeholder="Last Name" aria-label="Last Name" name="last_name" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+          </div>
+          <input required placeholder="Phone Number" aria-label="Phone Number" type="tel" name="phone" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+          <input required placeholder="Email" aria-label="Email Address" type="email" name="email" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+          <input required placeholder="ZIP Code" aria-label="ZIP Code" name="zip" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+          <textarea rows="3" placeholder="Tell us about your project:" aria-label="Project details" name="message" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box;resize:vertical"></textarea>
+          <button type="submit" style="height:54px;background:#7A3F96;color:#fff;border:none;font-family:Lato,sans-serif;font-weight:600;font-size:clamp(11px, 2.6vw, 12.5px);letter-spacing:0.10em;text-transform:uppercase;cursor:pointer;width:100%;padding:0 12px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;white-space:nowrap;transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
+            <span style="display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;gap:8px">Get My Free Planning Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:12.5px;flex-shrink:0;vertical-align:middle;display:inline-block"></i></span>
+          </button>
+          <span style="font-size:12px;line-height:17px;color:#777;text-align:center">No obligation. Let’s talk about your project.</span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP (Dark Theme with Gold Icons) -->
+  <TrustBar client:load items={trustItems} theme="dark" iconColor="#FDBD2E" dividerColor="rgba(255,255,255,0.24)" horizontal={true} />
+
+  <!-- SECTION 1: PLANNING IN THE WRONG ORDER + SIDE-BY-SIDE FORM -->
+  <section class="content-section-padded section1-section" style="max-width:1180px;margin:0 auto;padding:80px 40px;box-sizing:border-box;width:100%">
+    <div class="split-planning-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <h2 class="section1-title" style="margin:0;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:43px;color:#5D5D5D;text-wrap:pretty">The Expensive Mistake Is Not Asking for Help Early. It Is Planning in the Wrong Order.</h2>
+        <p style="margin:0;font-size:16px;line-height:26px;text-wrap:pretty">Homeowners often start with a folder of inspiration, a list of rooms, and conflicting advice. The risk is not that you do not have every answer. The risk is making irreversible decisions before the project has a clear direction. A useful first conversation connects your lifestyle, home, ideas, and next steps before the details become expensive.</p>
+        <a href="#lead-form" class="link-talk-ideas" style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;height:34px;margin-top:4px;color:#7A3F96;font-family:'Noto Serif',Georgia,serif;font-size:17px;text-decoration:none;box-shadow:inset 0 -1px 0 #7A3F96;transition:color 200ms cubic-bezier(.25,.1,.25,1)">
+          <span>Talk Through My Remodeling Ideas <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
+        </a>
+      </div>
+
+      <!-- Desktop-Only Form in Section 1 (Hidden on Mobile) -->
+      <form id="lead-form" class="section1-desktop-form hero-form-card" data-landing="3d-design" style="background:#F6F4F1;box-shadow:inset 0 0 0 1px #DDDDDD;box-sizing:border-box;padding:34px 32px 30px;display:flex;flex-direction:column;gap:11px;width:100%">
+        <h2 style="margin:0 0 4px;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:25px;line-height:31px;color:#7A3F96">Get My Free Planning Consultation</h2>
+        <div class="form-row-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:11px;width:100%">
+          <input required placeholder="First Name" aria-label="First Name" name="first_name" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+          <input required placeholder="Last Name" aria-label="Last Name" name="last_name" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+        </div>
+        <input required placeholder="Phone Number" aria-label="Phone Number" type="tel" name="phone" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+        <input required placeholder="Email" aria-label="Email Address" type="email" name="email" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+        <input required placeholder="ZIP Code" aria-label="ZIP Code" name="zip" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+        <textarea rows="3" placeholder="Tell us about your project:" aria-label="Project details" name="message" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box;resize:vertical"></textarea>
+        <button type="submit" style="height:54px;background:#7A3F96;color:#fff;border:none;font-family:Lato,sans-serif;font-weight:600;font-size:clamp(11px, 2.6vw, 12.5px);letter-spacing:0.10em;text-transform:uppercase;cursor:pointer;width:100%;padding:0 12px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;white-space:nowrap;transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
+          <span style="display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;gap:8px">Get My Free Planning Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:12.5px;flex-shrink:0;vertical-align:middle;display:inline-block"></i></span>
+        </button>
+        <span style="font-size:12px;line-height:17px;color:#777;text-align:center">No obligation. Let’s talk about your project.</span>
+      </form>
+    </div>
+  </section>
+
+  <!-- SECTION 2: TURNING YOUR VISION INTO REALITY (BEFORE / AFTER COMPARISON SLIDERS) -->
+  <section class="content-section-padded comparison-section" style="width:100%;padding:84px 40px;box-sizing:border-box;background:#F6F4F1">
+    <h2 class="comparison-title" style="margin:0 auto 34px;max-width:820px;text-align:center;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:36px;line-height:45px;color:#5D5D5D;text-wrap:pretty">Turning Your Vision into Reality</h2>
+    <div class="sliders-grid" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:28px">
+      <!-- KITCHEN COMPARISON -->
+      <BeforeAfterSlider 
+        client:load 
+        beforeImg="/assets/kitchen/kitchen-1-3d.webp?v=4" 
+        afterImg="/assets/kitchen/kitchen-1-after.webp?v=4" 
+        beforeLabel="3D Design" 
+        afterLabel="After"
+        aspectRatio="16 / 11"
+        labelBottom="Kitchen"
+      />
+      <!-- BATHROOM COMPARISON -->
+      <BeforeAfterSlider 
+        client:load 
+        beforeImg="/assets/bath/master-bath-3d.webp" 
+        afterImg="/assets/bath/master-bath-reality.webp" 
+        beforeLabel="3D Design" 
+        afterLabel="After"
+        aspectRatio="16 / 11"
+        labelBottom="Bathroom"
+      />
+    </div>
+    <p style="margin:26px auto 0;max-width:820px;text-align:center;font-size:16px;line-height:25px;color:#5D5D5D">Experience the journey from stunning 3D designs to breathtaking real-life transformations.</p>
+  </section>
+
+  <!-- SECTION 3: PHOTO MOSAIC (6 PHOTOS - Desktop 3 col, Mobile 2 col) -->
+  <GalleryGrid client:load photos={galleryPhotos}>
+    <div style="width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px">
+      <div style="position:relative;aspect-ratio:4 / 5;background:#000 url(/assets/kitchen/k01-clean.webp?v=2k) center / cover no-repeat;overflow:hidden"></div>
+      <div style="position:relative;aspect-ratio:4 / 5;background:#000 url(/assets/3d-design/bathroom-3d.webp) 65% center / cover no-repeat;overflow:hidden"></div>
+      <div style="position:relative;aspect-ratio:4 / 5;background:#000 url(/assets/general/backyard-pool.webp?v=2k) center / cover no-repeat;overflow:hidden"></div>
+      <div style="position:relative;aspect-ratio:4 / 5;background:#000 url(/assets/general/g06.webp?v=2k) center / cover no-repeat;overflow:hidden"></div>
+      <div style="position:relative;aspect-ratio:4 / 5;background:#000 url(/assets/general/g04.webp?v=2k) center / cover no-repeat;overflow:hidden"></div>
+      <div style="position:relative;aspect-ratio:4 / 5;background:#000 url(/assets/kitchen/k11.webp?v=2k) center / cover no-repeat;overflow:hidden"></div>
+    </div>
+  </GalleryGrid>
+
+  <!-- SECTION 4: 4 BENEFIT CARDS (Bordered-Top Variant - Mobile 2s Auto Carousel with Square Dots) -->
+  <section class="content-section-padded benefits-section" style="background:#F6F4F1;padding:80px 40px;box-sizing:border-box;width:100%">
+    <div style="max-width:1180px;margin:0 auto">
+      <CardCarousel client:load cards={benefitCards} variant="bordered-top" />
+    </div>
+  </section>
+
+  <!-- SECTION 5: QUESTIONS IN FRONT OF YOU (Desktop List, Mobile 2s Auto Carousel with Square Dots) -->
+  <section class="content-section-padded questions-section" style="max-width:1180px;margin:0 auto;padding:84px 40px;box-sizing:border-box;width:100%">
+    <h2 class="questions-title" style="margin:0 auto 18px;max-width:860px;text-align:center;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:43px;color:#5D5D5D;text-wrap:pretty">You Can Be Early in the Process and Still Be Ready for a Useful Conversation.</h2>
+    <p style="margin:0 auto 48px;max-width:780px;text-align:center;font-size:16px;line-height:26px;text-wrap:pretty">You might have only a feeling that the home needs to function differently. You might have a Pinterest board, old plans, an architect’s drawing, or a question about how far your remodel could go. Bring whatever you have. The objective is to make the next decision more informed—not to pressure you into a construction contract.</p>
+    <span class="questions-subheading" style="display:block;text-align:center;font-family:'Noto Serif',Georgia,serif;font-size:27px;line-height:34px;color:#7A3F96;margin-bottom:30px">We can start with the questions in front of you</span>
+    
+    <QuestionsCarousel client:load questions={questionsData} />
+
+    <div style="display:flex;justify-content:center;margin-top:38px">
+      <a href="#lead-form" class="cta-gold-btn" style="display:inline-flex;align-items:center;justify-content:center;gap:13px;height:54px;padding:0 48px;background:#BDA478;color:#fff;font-weight:600;font-size:14px;letter-spacing:0.300em;text-transform:uppercase;text-decoration:none;transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
+        <span>Get a Clearer Plan for My Remodel <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION 6: 3D SKETCH TRANSITION + HORIZONTAL PROCESS TIMELINE -->
+  <section style="width:100%;padding:0 0 84px;overflow:hidden">
+    <div style="width:100%;aspect-ratio:3924 / 1602;background:#F6F4F1 url(/assets/kitchen/sketch-transition.webp?v=2k) center / cover no-repeat"></div>
+    <div class="content-section-padded process-wrap" style="max-width:1180px;margin:0 auto;padding:64px 40px 0;box-sizing:border-box;width:100%">
+      <h2 class="process-title" style="margin:0 auto 52px;max-width:820px;text-align:center;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:36px;line-height:45px;color:#5D5D5D;text-wrap:pretty">A More Useful Route From Inspiration to a Build-Ready Direction.</h2>
+      
+      <!-- HORIZONTAL TIMELINE WITH STEP IMAGES (Desktop 3 columns, Mobile 1-by-1 carousel with square dots) -->
+      <ProcessTimeline client:load steps={processSteps} layout="horizontal" />
+
+      <p style="margin:46px auto 0;max-width:840px;text-align:center;font-size:14px;line-height:23px;color:#777">The City of Los Angeles directs homeowners to begin a building project by reviewing zoning and documentation, then determining the relevant permit and plan-check path. For complex work, requirements can involve plans and additional agency approvals.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 7: TESTIMONIALS (Mobile Auto Carousel with Square Dots) -->
+  <section class="content-section-padded testimonials-section" style="background:#F6F4F1;padding:80px 40px;box-sizing:border-box;width:100%">
+    <div style="max-width:940px;margin:0 auto">
+      <h2 class="testimonials-title" style="margin:0 0 48px;text-align:center;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:43px;color:#5D5D5D;text-wrap:pretty">When Homeowners Do Not Have Every Answer Yet.</h2>
+      <TestimonialsCarousel client:load testimonials={testimonialsData} showQuotes={false} />
+      <div style="display:flex;justify-content:center;margin-top:38px">
+        <a href="#lead-form" class="cta-purple-btn" style="display:inline-flex;align-items:center;justify-content:center;gap:13px;height:56px;padding:0 50px;background:#7A3F96;color:#fff;font-weight:600;font-size:14px;letter-spacing:0.300em;text-transform:uppercase;text-decoration:none;transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
+          <span>Start My Remodeling Direction Conversation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: FAQ -->
+  <section class="content-section-padded faq-section" style="max-width:860px;margin:0 auto;padding:84px 40px;box-sizing:border-box;width:100%">
+    <h2 class="faq-title" style="margin:0 0 40px;text-align:center;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:34px;color:#5D5D5D">Frequently Asked Questions</h2>
+    <div style="display:flex;flex-direction:column;border-top:1px solid #B5BCC0">
+      <details style="border-bottom:1px solid #B5BCC0">
+        <summary style="display:flex;align-items:center;gap:18px;padding:20px 2px;cursor:pointer;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:26px;color:#5D5D5D">
+          <span style="flex:1">I only have inspiration photos. Is it too early to contact you?</span>
+          <span class="faq-plus" style="flex:0 0 auto;font-family:Lato,sans-serif;font-size:22px;color:#7A3F96;transition:transform 200ms cubic-bezier(.25,.1,.25,1)">+</span>
+        </summary>
+        <p style="margin:0;padding:0 44px 22px 2px;font-size:15px;line-height:24px">No. Inspiration is a useful starting point, especially when paired with an explanation of what you need the room or home to do differently. The purpose of the initial conversation is to help define direction—not to require that every decision already be made.</p>
+      </details>
+      <details style="border-bottom:1px solid #B5BCC0">
+        <summary style="display:flex;align-items:center;gap:18px;padding:20px 2px;cursor:pointer;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:26px;color:#5D5D5D">
+          <span style="flex:1">Can you create blueprints or stamped architectural plans?</span>
+          <span class="faq-plus" style="flex:0 0 auto;font-family:Lato,sans-serif;font-size:22px;color:#7A3F96;transition:transform 200ms cubic-bezier(.25,.1,.25,1)">+</span>
+        </summary>
+        <p style="margin:0;padding:0 44px 22px 2px;font-size:15px;line-height:24px">Bring your needs or any existing plans to the consultation so the appropriate next step can be discussed.</p>
+      </details>
+      <details style="border-bottom:1px solid #B5BCC0">
+        <summary style="display:flex;align-items:center;gap:18px;padding:20px 2px;cursor:pointer;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:26px;color:#5D5D5D">
+          <span style="flex:1">Do I need a permit before I start planning?</span>
+          <span class="faq-plus" style="flex:0 0 auto;font-family:Lato,sans-serif;font-size:22px;color:#7A3F96;transition:transform 200ms cubic-bezier(.25,.1,.25,1)">+</span>
+        </summary>
+        <p style="margin:0;padding:0 44px 22px 2px;font-size:15px;line-height:24px">You do not need to resolve every permit question before the first conversation, but it should be part of responsible planning. The City of Los Angeles says requirements vary by project complexity: some work may qualify for an Express Permit, while more complex projects may require plan check and supporting documentation.</p>
+      </details>
+      <details style="border-bottom:1px solid #B5BCC0">
+        <summary style="display:flex;align-items:center;gap:18px;padding:20px 2px;cursor:pointer;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:26px;color:#5D5D5D">
+          <span style="flex:1">Why use 3D visualization?</span>
+          <span class="faq-plus" style="flex:0 0 auto;font-family:Lato,sans-serif;font-size:22px;color:#7A3F96;transition:transform 200ms cubic-bezier(.25,.1,.25,1)">+</span>
+        </summary>
+        <p style="margin:0;padding:0 44px 22px 2px;font-size:15px;line-height:24px">3D visualization provides a clearer preview of the project direction. It can make layout and style decisions easier to discuss before construction begins.</p>
+      </details>
+      <details style="border-bottom:1px solid #B5BCC0">
+        <summary style="display:flex;align-items:center;gap:18px;padding:20px 2px;cursor:pointer;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:26px;color:#5D5D5D">
+          <span style="flex:1">Are you licensed?</span>
+          <span class="faq-plus" style="flex:0 0 auto;font-family:Lato,sans-serif;font-size:22px;color:#7A3F96;transition:transform 200ms cubic-bezier(.25,.1,.25,1)">+</span>
+        </summary>
+        <p style="margin:0;padding:0 44px 22px 2px;font-size:15px;line-height:24px">Abraham Building &amp; Consulting lists CSLB License #1046696. You can independently verify contractor licensing through the CSLB.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- SECTION 9: SPLIT FINAL CTA -->
+  <section class="split-final-cta" style="width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+    <div class="cta-photo-side" style="min-height:420px;background:#000 url(/assets/3d-design/3d-design-thumb.jpeg) center / cover no-repeat"></div>
+    <div class="cta-content-side" style="background:#271D3E;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:20px;padding:72px 56px;box-sizing:border-box">
+      <h2 class="cta-heading-white" style="margin:0;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:33px;line-height:43px;color:#fff;text-wrap:pretty">
+        Do Not Let a Good Idea Get Stuck in Research Mode.<span style="display:block;margin-top:8px;font-style:italic;color:#FDBD2E">Give It a Clearer Direction.</span>
+      </h2>
+      <p style="margin:0;max-width:520px;font-size:17px;line-height:27px;color:rgba(255,255,255,0.88);text-wrap:pretty">
+        Tell us what you are considering, where your home is located, and where you feel stuck. Start with a free remodeling direction consultation and take the next step with more clarity.
+      </p>
+      <a href="#lead-form" class="btn-schedule-cta" style="display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;white-space:nowrap;gap:11px;height:48px;padding:0 30px;background:#BDA478;color:#fff;font-weight:600;font-size:12px;letter-spacing:0.220em;text-transform:uppercase;text-decoration:none;margin-top:4px;transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
+        <span>Schedule My Free Planning Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
+      </a>
+      <span style="font-size:14px;color:rgba(255,255,255,0.72)">Call <a href="tel:8184573390" style="color:#fff;text-decoration:underline">(818) 457-3390</a> or submit your project details. No obligation.</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="border-top:2px solid #271D3E;background:#fff;padding:52px 40px 22px">
+    <div style="max-width:640px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px">
+      <img src="/assets/logo-abc-pro.webp" alt="Abraham Building & Consulting" width="104" height="104" loading="lazy" decoding="async" style="width:104px;height:104px;object-fit:contain;display:block" />
+      <span style="font-weight:800;font-size:15px;letter-spacing:0.180em;line-height:22px;color:#777">CSLB License #1046696</span>
+      <p style="margin:0;font-size:13px;line-height:20px;color:#777">At Abraham Building &amp; Consulting, we deliver high-quality home remodeling and construction services in Los Angeles. Owned and managed by a family with over 20 years of industry experience, we are qualified to handle all your renovation needs!</p>
+
+    </div>
+    
+    <p style="margin:36px 0 0;text-align:center;font-size:12px;line-height:20px;color:#777">
+      Abraham Building &amp; Consulting © 2026  |  CSLB License #1046696  |  Privacy Policy  |  Disclaimer
+    </p>
+  </footer>
+
+  <script is:inline>
+    // Smooth scroll for form consultation buttons
+    document.querySelectorAll('a[href^="#lead-form"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        const forms = document.querySelectorAll('#lead-form');
+        for (const f of forms) {
+          if (f.offsetParent !== null) {
+            f.scrollIntoView({ behavior: 'smooth' });
+            break;
+          }
+        }
+      });
+    });
+  </script>
+
+  <style is:inline>
+    /* ZERO HORIZONTAL OVERFLOW & SAFE BOX SIZING */
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+    }
+    html, body {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* DEFAULT DESKTOP BEHAVIOR (> 1200px) */
+    .hero-mobile-image-wrap {
+      display: none !important;
+    }
+    .hero-mobile-call-wrap {
+      display: none !important;
+    }
+    .hero-mobile-form-wrap {
+      display: none !important;
+    }
+    .hero-desktop-buttons {
+      display: flex !important;
+    }
+    .section1-desktop-form {
+      display: flex !important;
+    }
+
+    /* Interactive Hover Effects from Design Cloud */
+    .btn-outline-white:hover {
+      background-color: rgba(255, 255, 255, 0.14) !important;
+    }
+    .cta-gold-btn:hover,
+    .btn-schedule-cta:hover {
+      background-color: #7A3F96 !important;
+    }
+    .section1-desktop-form button[type="submit"]:hover,
+    .hero-mobile-form-wrap button[type="submit"]:hover,
+    .cta-purple-btn:hover {
+      background-color: #612086 !important;
+    }
+    .link-talk-ideas:hover {
+      color: #612086 !important;
+      box-shadow: inset 0 -1px 0 #612086 !important;
+    }
+
+    /* MOBILE BREAKPOINT (<= 1200px) - STRICTLY ACCORDING TO DOCUMENTO SIN TÍTULO.MD */
+    @media (max-width: 1200px) {
+      /* WORD & CONTAINER OVERFLOW PROTECTION */
+      p, h1, h2, h3, h4, span, a, button, input, textarea {
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+      }
+
+      /* TOP NAV BAR - CLEAN COMPACT FIT */
+      .top-nav-bar {
+        padding: 10px 16px !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+      }
+      .nav-logo {
+        width: 64px !important;
+        max-width: 64px !important;
+        height: auto !important;
+        flex-shrink: 0 !important;
+      }
+      .nav-phone-text {
+        font-size: 13.5px !important;
+        font-weight: 700 !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        flex: 1 !important;
+      }
+      .nav-call-btn {
+        height: 34px !important;
+        padding: 0 10px !important;
+        font-size: 11px !important;
+        letter-spacing: 0.08em !important;
+        gap: 5px !important;
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+      }
+
+      /* HERO SECTION: Image on top, then text + button, then form below */
+      .hero-section {
+        min-height: auto !important;
+        background: #271D3E !important;
+        display: block !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+      }
+      .hero-desktop-bg,
+      .hero-overlay {
+        display: none !important;
+      }
+      .hero-mobile-image-wrap {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 350px !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .hero-mobile-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+      }
+      .hero-container {
+        padding: 28px 20px 36px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        gap: 20px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      .hero-text-block {
+        gap: 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: left !important;
+        align-items: flex-start !important;
+      }
+      .hero-eyebrow {
+        font-size: 11.5px !important;
+        letter-spacing: 0.12em !important;
+        line-height: 16px !important;
+        color: #FDBD2E !important;
+        font-weight: 900 !important;
+        text-transform: uppercase !important;
+        text-align: left !important;
+        word-break: break-word !important;
+      }
+      .hero-title {
+        font-family: 'Noto Serif', Georgia, serif !important;
+        font-size: clamp(23px, 5.8vw, 29px) !important;
+        line-height: 1.2 !important;
+        color: #fff !important;
+        margin: 0 !important;
+        text-align: left !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        max-width: 100% !important;
+      }
+      .hero-description {
+        font-size: 15px !important;
+        line-height: 23px !important;
+        color: rgba(255,255,255,0.92) !important;
+        margin: 0 !important;
+        text-align: left !important;
+        max-width: 100% !important;
+      }
+      .hero-desktop-buttons {
+        display: none !important;
+      }
+      .hero-mobile-call-wrap {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .btn-mobile-call {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        height: 50px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        background: #BDA478 !important;
+        color: #fff !important; font-weight: 600 !important;
+        font-size: 13px !important;
+        letter-spacing: 0.160em !important;
+        text-transform: uppercase !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+      }
+
+      /* HERO MOBILE FORM */
+      .hero-mobile-form-wrap {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin-top: 6px !important;
+      }
+      .hero-mobile-form-wrap .hero-form-card {
+        padding: 26px 20px 22px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        background: #F6F4F1 !important;
+        box-shadow: inset 0 0 0 1px #DDDDDD !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        text-align: left !important;
+      }
+      .hero-mobile-form-wrap .hero-form-card h2 {
+        font-size: 21px !important;
+        line-height: 27px !important;
+        color: #7A3F96 !important;
+        margin: 0 0 4px !important;
+        word-break: break-word !important;
+      }
+      .hero-mobile-form-wrap .hero-form-card input,
+      .hero-mobile-form-wrap .hero-form-card textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 11px 13px !important;
+        font-size: 14px !important;
+      }
+      .hero-mobile-form-wrap .hero-form-card button {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        height: auto !important;
+        min-height: 50px !important;
+        padding: 10px 16px !important;
+        font-size: 12px !important;
+        letter-spacing: 0.15em !important;
+        text-align: center !important;
+      }
+
+      /* SECTION 1 MOBILE: Only text is shown, duplicate form is hidden */
+      .content-section-padded {
+        padding: 56px 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .split-planning-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .section1-title {
+        font-size: clamp(23px, 5.5vw, 29px) !important;
+        line-height: 33px !important;
+        word-break: break-word !important;
+      }
+      .section1-desktop-form {
+        display: none !important;
+      }
+
+      /* SECTION 2 COMPARISON SLIDERS */
+      .comparison-section {
+        padding: 56px 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .comparison-title {
+        font-size: clamp(23px, 5.5vw, 30px) !important;
+        line-height: 33px !important;
+        word-break: break-word !important;
+        text-align: center !important;
+      }
+      .sliders-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* SECTION 4 BENEFITS */
+      .benefits-section {
+        padding: 56px 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      /* SECTION 5 QUESTIONS */
+      .questions-section {
+        padding: 56px 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .questions-title {
+        font-size: clamp(23px, 5.5vw, 29px) !important;
+        line-height: 33px !important;
+        word-break: break-word !important;
+        text-align: center !important;
+      }
+      .questions-subheading {
+        font-size: 20px !important;
+        line-height: 28px !important;
+        word-break: break-word !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+      }
+      .cta-gold-btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 14px !important;
+        font-size: 11.5px !important;
+        letter-spacing: 0.12em !important;
+        height: auto !important;
+        min-height: 48px !important;
+        text-align: center !important;
+        white-space: normal !important;
+        box-sizing: border-box !important;
+      }
+
+      /* SECTION 6 PROCESS */
+      .process-wrap {
+        padding: 36px 20px 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .process-title {
+        font-size: clamp(23px, 5.5vw, 29px) !important;
+        line-height: 33px !important;
+        word-break: break-word !important;
+        text-align: center !important;
+        margin-bottom: 28px !important;
+      }
+
+      /* SECTION 7 TESTIMONIALS */
+      .testimonials-section {
+        padding: 56px 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .testimonials-title {
+        font-size: clamp(23px, 5.5vw, 29px) !important;
+        line-height: 33px !important;
+        word-break: break-word !important;
+        text-align: center !important;
+        margin-bottom: 28px !important;
+      }
+      .cta-purple-btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 14px !important;
+        font-size: 11.5px !important;
+        letter-spacing: 0.12em !important;
+        height: auto !important;
+        min-height: 48px !important;
+        text-align: center !important;
+        white-space: normal !important;
+        box-sizing: border-box !important;
+      }
+
+      /* SECTION 8 FAQ */
+      .faq-section {
+        padding: 56px 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .faq-title {
+        font-size: clamp(23px, 5.5vw, 29px) !important;
+        line-height: 33px !important;
+        word-break: break-word !important;
+        text-align: center !important;
+        margin-bottom: 24px !important;
+      }
+
+      /* SECTION 9 SPLIT FINAL CTA */
+      .split-final-cta {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .cta-photo-side {
+        min-height: 240px !important;
+        width: 100% !important;
+      }
+      .cta-content-side {
+        padding: 44px 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .cta-heading-white {
+        font-size: clamp(23px, 5.5vw, 29px) !important;
+        line-height: 33px !important;
+        word-break: break-word !important;
+      }
+      .btn-schedule-cta {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 14px !important;
+        font-size: 11.5px !important;
+        letter-spacing: 0.12em !important;
+        text-align: center !important;
+        white-space: normal !important;
+        height: auto !important;
+        min-height: 48px !important;
+        box-sizing: border-box !important;
+      }
+
+      /* FOOTER */
+      .site-footer {
+        padding: 40px 20px 24px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+    }
+  </style>
+
+</Layout>

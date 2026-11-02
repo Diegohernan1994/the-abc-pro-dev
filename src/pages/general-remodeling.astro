@@ -1,0 +1,624 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ReviewLogoCarousel from '../components/ReviewLogoCarousel.astro';
+import DesktopReviewLogos from '../components/DesktopReviewLogos.astro';
+import TrustBar from '../components/TrustBar.jsx';
+import CardCarousel from '../components/CardCarousel.jsx';
+import ProcessTimeline from '../components/ProcessTimeline.jsx';
+import GalleryGrid from '../components/GalleryGrid.jsx';
+import TestimonialsCarousel from '../components/TestimonialsCarousel.jsx';
+import ServiceCardsSection from '../components/ServiceCardsSection.jsx';
+
+const trustItems = [
+  { icon: 'fa-solid fa-shield-halved', text: 'CSLB License #1046696' },
+  { icon: 'fa-solid fa-house-chimney', text: 'Family-Owned & Managed' },
+  { icon: 'fa-solid fa-award', text: '20+ Years of Industry Experience' },
+  { icon: 'fa-solid fa-cube', text: 'In-Person Planning + 3D Visualization' },
+];
+
+const servicesData = [
+  {
+    title: 'Kitchen Remodeling',
+    description: 'Create a kitchen that works better for cooking, gathering, and everyday life.',
+    image: '/assets/general/g08.webp'
+  },
+  {
+    title: 'Bathroom Remodeling',
+    description: 'Update an outdated bathroom into a space that feels more comfortable and functional.',
+    image: '/assets/general/g05.webp'
+  },
+  {
+    title: 'Living & Dining Spaces',
+    description: 'Improve the way connected rooms flow, feel, and function together.',
+    image: '/assets/general/g06.webp'
+  },
+  {
+    title: 'Multi-Room Remodeling',
+    description: 'Bring several updates into one coordinated project instead of treating each room separately.',
+    image: '/assets/general/g07.webp'
+  },
+  {
+    title: 'Full-Home Remodeling',
+    description: 'Reimagine your home with a more unified approach to layout, finishes, and daily living.',
+    image: '/assets/general/g01.webp'
+  },
+  {
+    title: 'Home Additions',
+    description: 'Create room for what’s next with a new footprint that connects to the home you already own.',
+    image: '/assets/additions/a05.webp'
+  }
+];
+
+const benefitCards = [
+  {
+    icon: 'fa-solid fa-list-check',
+    title: 'Start with priorities, not a sales pitch',
+    description: 'Tell us what you want to fix first and what must work better when the project is complete.'
+  },
+  {
+    icon: 'fa-solid fa-cube',
+    title: 'See the larger picture',
+    description: '3D visualization helps make the design direction easier to understand before construction decisions are made.'
+  },
+  {
+    icon: 'fa-solid fa-file-signature',
+    title: 'Make scope visible',
+    description: 'A complete written agreement is one of California’s most important homeowner protections. Your project conversation should move toward clear work, materials, schedule, permits, and change-order expectations.'
+  },
+  {
+    icon: 'fa-solid fa-route',
+    title: 'Follow one understandable path',
+    description: 'Start in person, move through design and final selections, then proceed to construction and a final walkthrough.'
+  }
+];
+
+const consultationCards = [
+  {
+    icon: 'fa-solid fa-gears',
+    title: 'What needs to work differently?',
+    description: 'Function defines the project better than trends do.'
+  },
+  {
+    icon: 'fa-solid fa-diagram-project',
+    title: 'Which spaces are connected?',
+    description: 'It helps determine whether staged work or a single larger scope makes more sense to discuss.'
+  },
+  {
+    icon: 'fa-solid fa-stamp',
+    title: 'What documents or approvals may apply?',
+    description: 'Requirements differ by scope and jurisdiction; they need to be identified early rather than assumed.'
+  }
+];
+
+const processSteps = [
+  {
+    number: '01',
+    title: 'Meet and Prioritize',
+    text: 'We meet in person to discuss the rooms, frustrations, goals, and budget considerations shaping your remodel.',
+    image: '/assets/additions/step-02.png'
+  },
+  {
+    number: '02',
+    title: 'Design and Finalize',
+    text: 'Use 3D visualization to explore the direction, then finalize plans and materials before construction starts.',
+    image: '/assets/additions/step-01.png'
+  },
+  {
+    number: '03',
+    title: 'Build and Walk Through',
+    text: 'Construction follows the approved project plan, ending with a final walkthrough together.',
+    image: '/assets/additions/step-03.png'
+  }
+];
+
+const galleryPhotos = [
+  '/assets/general/gal-1.jpeg?v=1',
+  '/assets/general/gal-2.jpeg?v=1',
+  '/assets/general/thumbs/general-remodeling-ext.jpeg?v=1',
+  '/assets/general/gal-3.jpeg?v=2',
+  '/assets/general/gal-4.jpeg?v=1',
+  '/assets/general/g04.webp?v=2k',
+  '/assets/general/g05.webp?v=2k',
+  '/assets/general/g01.webp?v=2k'
+];
+
+const testimonialsData = [
+  {
+    author: 'Raphael H.',
+    location: '',
+    quote: "I was looking for a contractor to do some general remodeling in my new house. Its my first house so i didn't have any previous experience. I interviewed some good and some bad companies. My friend recommended Rani so I set up an appointment. All I can say is I'm glad I did because the work come out flawless & the process was painless.",
+    quoteColor: '#7A3F96',
+    closeQuoteColor: '#DDDDDD',
+    sourceLogo: '/assets/yelp-logo.png',
+    sourceName: 'Yelp',
+    sourceText: 'published Yelp review'
+  },
+  {
+    author: 'Daniela R.',
+    location: 'Koreatown, Los Angeles, CA',
+    quote: 'Rani and the team do an amazing Job on our renovation. We had our kitchen totally redone along with our pantry and bathrooms. We highly recommend them for any of your home renovations!',
+    quoteColor: '#BDA478',
+    closeQuoteColor: '#7A3F96',
+    sourceLogo: '/assets/google-logo.svg',
+    sourceName: 'Google Reviews',
+    sourceText: 'published Google My Business review'
+  }
+];
+---
+
+<Layout title="General Remodeling in Los Angeles | The ABC Pro" description="Bring your ideas together in one clear plan for a home that works better, feels better, and looks like you. Free consultation and CSLB #1046696." preloadImage="/assets/general/hero.webp">
+  
+  <!-- STICKY TOP CALL BAR -->
+  <div class="top-nav-bar" style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);border-bottom:1px solid #B5BCC0;display:flex;align-items:center;gap:24px;padding:10px 40px;box-shadow:0 1px 4px -1px rgba(0,0,0,0.12);border-radius:0">
+    <img src="/assets/logo-abc-pro.webp" alt="Abraham Building & Consulting" class="nav-logo" style="width:107px;height:73px;object-fit:contain;display:block;flex-shrink:0;border-radius:0" />
+    <a href="tel:8184573390" class="nav-phone-text" style="margin-left:auto;font-family:'Noto Serif',Georgia,serif;font-size:21px;color:#7A3F96;text-decoration:none;white-space:nowrap">(818) 457-3390</a>
+    <a href="tel:8184573390" class="nav-call-btn" style="display:inline-flex;align-items:center;justify-content:center;gap:11px;height:44px;padding:0 42px;background:#7A3F96;color:#fff;font-weight:600;font-size:13px;letter-spacing:0.300em;text-transform:uppercase;text-decoration:none;white-space:nowrap;flex-shrink:0;border-radius:0">
+      <i class="fa-solid fa-phone" aria-hidden="true" style="font-size:13px"></i>
+      <span>Call Now</span>
+    </a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" style="position:relative;min-height:620px;display:flex;align-items:center;background:#271D3E">
+    <!-- Desktop Background -->
+    <div class="hero-desktop-bg" style="position:absolute;inset:0;background:#271D3E url(/assets/general/hero.webp) center / cover no-repeat"></div>
+    <div class="hero-overlay" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.78) 0%,rgba(0,0,0,0.55) 48%,rgba(0,0,0,0.22) 100%);pointer-events:none"></div>
+
+    <div class="hero-container" style="position:relative;width:100%;max-width:1180px;margin:0 auto;padding:60px 40px 120px">
+      
+      <!-- Mobile-Only Hero Image (Top) -->
+      <div class="hero-mobile-image-wrap">
+        <img src="/assets/general/hero.webp" alt="General Remodeling in Los Angeles" class="hero-mobile-img" width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
+      </div>
+
+      <div class="hero-grid-inner">
+        <!-- TEXT CONTENT -->
+        <div class="hero-text-block" style="display:flex;flex-direction:column;gap:22px">
+          <span style="font-weight:900;font-size:13px;letter-spacing:0.300em;text-transform:uppercase;color:#FDBD2E">Free Remodeling Consultation</span>
+          <h1 style="margin:0;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:clamp(34px,4.4vw,52px);line-height:1.1;color:#fff;text-wrap:pretty">General Remodeling in Los Angeles</h1>
+          <p class="hero-review-description" style="margin:0;font-size:18px;line-height:28px;color:rgba(255,255,255,0.92);max-width:540px;text-wrap:pretty">Bring your ideas together in one clear plan for a home that works better, feels better, and looks like you.</p>
+          <ReviewLogoCarousel />
+          <a href="tel:8184573390" style="align-self:flex-start;display:inline-flex;align-items:center;justify-content:center;gap:12px;height:52px;padding:0 40px;background:#BDA478;color:#fff;font-weight:600;font-size:14px;letter-spacing:0.300em;text-transform:uppercase;text-decoration:none;margin-top:4px">
+            <i class="fa-solid fa-phone" aria-hidden="true" style="font-size:15px"></i>
+            <span>Call (818) 457-3390</span>
+          </a>
+          <DesktopReviewLogos />
+        </div>
+
+        <!-- LEAD FORM -->
+        <form id="lead-form" class="hero-form-card" data-landing="general-remodeling" style="background:#fff;max-width:460px;width:100%;justify-self:end;box-sizing:border-box;padding:30px 30px 26px;display:flex;flex-direction:column;gap:11px;box-shadow:0 14px 40px rgba(0,0,0,0.34)">
+          <h2 style="margin:0 0 4px;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:25px;line-height:31px;color:#7A3F96">Get My Free Remodeling Consultation</h2>
+          <div class="form-row-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:11px;width:100%">
+            <input required placeholder="First Name" aria-label="First Name" name="first_name" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+            <input required placeholder="Last Name" aria-label="Last Name" name="last_name" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+          </div>
+          <input required placeholder="Phone Number" aria-label="Phone Number" type="tel" name="phone" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+          <input required placeholder="Email" aria-label="Email Address" type="email" name="email" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+          <input required placeholder="ZIP Code" aria-label="ZIP Code" name="zip" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
+          <select name="areas" aria-label="Which areas do you want to improve?" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box">
+            <option value="">Which areas do you want to improve?</option>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Bathroom">Bathroom</option>
+            <option value="Living & Dining">Living & Dining</option>
+            <option value="Multiple Rooms">Multiple Rooms</option>
+            <option value="Full-Home Remodel">Full-Home Remodel</option>
+            <option value="Other">Other</option>
+          </select>
+          <button type="submit" style="height:54px;background:#7A3F96;color:#fff;border:none;font-family:Lato,sans-serif;font-weight:600;font-size:clamp(10.5px, 2.5vw, 12px);letter-spacing:0.09em;text-transform:uppercase;cursor:pointer;width:100%;padding:0 12px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;white-space:nowrap;transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
+            <span style="display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;gap:8px">Get My Free Remodeling Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:12.5px;flex-shrink:0;vertical-align:middle;display:inline-block"></i></span>
+          </button>
+          <span style="font-size:12px;line-height:17px;color:#777;text-align:center">No obligation. Let’s talk about your project.</span>
+        </form>
+      </div>
+    </div>
+
+    <!-- Desktop Bottom Trust Bar Overlay -->
+    <div class="general-trust-desktop" style="position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.55) 42%,rgba(0,0,0,0.82) 100%);padding:32px 40px 20px;box-sizing:border-box">
+      <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center">
+        <span style="display:flex;align-items:center;justify-content:center;gap:10px;padding:0 14px;">
+          <i class="fa-solid fa-shield-halved" aria-hidden="true" style="font-size:16px;color:#FDBD2E;flex:0 0 auto"></i>
+          <span style="font-weight:600;font-size:11px;line-height:16px;letter-spacing:0.120em;text-transform:uppercase;color:#fff;text-wrap:pretty">CSLB License #1046696</span>
+        </span>
+        <span style="display:flex;align-items:center;justify-content:center;gap:10px;padding:0 14px;border-left:1px solid rgba(255,255,255,0.28)">
+          <i class="fa-solid fa-house-chimney" aria-hidden="true" style="font-size:16px;color:#FDBD2E;flex:0 0 auto"></i>
+          <span style="font-weight:600;font-size:11px;line-height:16px;letter-spacing:0.120em;text-transform:uppercase;color:#fff;text-wrap:pretty">Family-Owned & Managed</span>
+        </span>
+        <span style="display:flex;align-items:center;justify-content:center;gap:10px;padding:0 14px;border-left:1px solid rgba(255,255,255,0.28)">
+          <i class="fa-solid fa-award" aria-hidden="true" style="font-size:16px;color:#FDBD2E;flex:0 0 auto"></i>
+          <span style="font-weight:600;font-size:11px;line-height:16px;letter-spacing:0.120em;text-transform:uppercase;color:#fff;text-wrap:pretty">20+ Years of Industry Experience</span>
+        </span>
+        <span style="display:flex;align-items:center;justify-content:center;gap:10px;padding:0 14px;border-left:1px solid rgba(255,255,255,0.28)">
+          <i class="fa-solid fa-cube" aria-hidden="true" style="font-size:16px;color:#FDBD2E;flex:0 0 auto"></i>
+          <span style="font-weight:600;font-size:11px;line-height:16px;letter-spacing:0.120em;text-transform:uppercase;color:#fff;text-wrap:pretty">In-Person Planning + 3D Visualization</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Trust Bar (Automatic Infinite Carousel) -->
+  <div class="general-trust-mobile">
+    <TrustBar client:load items={trustItems} theme="dark" />
+  </div>
+
+  <!-- SECTION: SERVICES CARDS (Desktop Grid / Mobile 2s Carousel with Square Dots) -->
+  <section style="max-width:1180px;margin:0 auto;padding:84px 40px" class="content-section-padded">
+    <h2 style="margin:0 auto 16px;max-width:860px;text-align:center;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:43px;color:#5D5D5D;text-wrap:pretty">One Remodeling Conversation for the Spaces That Matter Most.</h2>
+    <p style="margin:0 auto 48px;max-width:760px;text-align:center;font-size:16px;line-height:26px;text-wrap:pretty">Whether you want to transform one room or rethink several connected spaces, start with one free consultation. Tell us what is not working today, and we will help you turn it into a clearer project direction.</p>
+
+    <ServiceCardsSection client:load services={servicesData} />
+
+    <div style="display:flex;justify-content:center;margin-top:34px">
+      <a href="#lead-form" style="display:inline-flex;align-items:center;justify-content:center;gap:13px;height:54px;padding:0 48px;background:#BDA478;color:#fff;font-weight:600;font-size:14px;letter-spacing:0.300em;text-transform:uppercase;text-decoration:none">
+        <span>Discuss My Home Project <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ANTI-FRAGMENTATION PANEL + 4 BENEFIT CARDS -->
+  <section style="max-width:1180px;margin:0 auto;padding:0 40px 84px" class="content-section-padded">
+    <div style="position:relative;padding-top:100px;min-height:560px;box-sizing:border-box" class="risk-panel-wrapper">
+      <div class="risk-panel-bg" style="position:absolute;top:0;left:0;right:0;height:560px;background:#000 url(/assets/general/g02.webp) center / cover no-repeat"></div>
+      <div class="risk-panel-card" style="position:relative;max-width:520px;margin-left:70px;background:#fff;padding:44px 40px;box-sizing:border-box;box-shadow:0 14px 40px rgba(39,29,62,0.18)">
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <h2 style="margin:0;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:30px;line-height:38px;color:#5D5D5D;text-wrap:pretty">The More Rooms You Change, the More Important It Is to Have a Plan That Holds Together.</h2>
+          <p style="margin:0;font-size:15px;line-height:24px;text-wrap:pretty">A broader remodel can involve layout decisions, finishes, project sequencing, and requirements that vary with the scope of work. It is easy for homeowners to end up collecting separate opinions without gaining a usable direction. A better start is to look at the home as one connected experience: how the rooms work now, what you want to change, and what should be decided first.</p>
+          <a href="#lead-form" style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;height:34px;margin-top:4px;padding:0;background:transparent;color:#7A3F96;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:17px;letter-spacing:0;text-transform:none;text-decoration:none;box-shadow:inset 0 -1px 0 #7A3F96">
+            <span>Organize My Remodel Plans <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 BENEFIT CARDS (Desktop 2x2 / Mobile Infinite 2s Carousel) -->
+    <CardCarousel client:load cards={benefitCards} desktopColumns={2} />
+  </section>
+
+  <!-- CALLOUT SPLIT BANNER -->
+  <section class="split-callout-section" style="width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(min(100%,520px),auto) minmax(0,1fr);min-height:400px">
+    <div style="min-height:200px;background:#000 url(/assets/general/general-remodeling-1.jpeg?v=1) center / cover no-repeat"></div>
+    <div style="min-width:0;background:#271D3E;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:64px 40px;box-sizing:border-box;text-align:center">
+      <h2 style="margin:0;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:27px;line-height:36px;color:#FDBD2E;text-wrap:pretty">Organize My Remodel Plans</h2>
+      <a href="tel:8184573390" class="btn-rather-talk" style="display:inline-flex;align-items:center;justify-content:center;gap:13px;height:56px;padding:0 40px;background:transparent;box-shadow:inset 0 0 0 1px #BDA478;color:#fff;font-family:'Noto Serif',Georgia,serif;font-size:19px;line-height:26px;text-decoration:none;transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
+        <span>Rather talk it through?</span>
+        <span style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap">
+          <i class="fa-solid fa-phone" aria-hidden="true" style="font-size:15px;color:#BDA478"></i>(818) 457-3390
+        </span>
+      </a>
+    </div>
+    <div style="min-height:200px;background:#000 url(/assets/general/general-remodeling-2.jpeg?v=1) center / cover no-repeat"></div>
+  </section>
+
+  <!-- BLUEPRINT / STARTING POINT SECTION -->
+  <section style="max-width:1180px;margin:0 auto;padding:84px 40px" class="content-section-padded">
+    <div class="blueprint-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:center">
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:200px 200px;gap:10px">
+        <div style="grid-column:span 2;background:#000 url(/assets/general/thumbs/starting-point-top.jpeg?v=1) center / cover no-repeat"></div>
+        <div style="background:#000 url(/assets/general/thumbs/starting-point-bot1.jpeg?v=1) center / cover no-repeat"></div>
+        <div style="background:#000 url(/assets/general/thumbs/starting-point-bot2.jpeg?v=1) center / cover no-repeat"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <h2 style="margin:0;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:43px;color:#5D5D5D;text-wrap:pretty">You Do Not Have to Solve the Entire House Before You Reach Out.</h2>
+        <p style="margin:0;font-size:16px;line-height:26px;text-wrap:pretty">You may know exactly what you want. Or you may only know that the kitchen feels closed off, the bathrooms are dated, and the layout no longer fits your family. Both are legitimate starting points. The job of the first conversation is to identify your priorities and bring the project into focus—without pretending every decision has already been made.</p>
+      </div>
+    </div>
+
+    <!-- THREE COLUMN CONVERSATION CARDS -->
+    <div style="position:relative;margin-top:56px;padding:44px 44px 42px;background:#FBFAF8;box-shadow:inset 0 0 0 1px #DDDDDD;overflow:hidden" class="conversation-box">
+      <span style="position:relative;display:block;text-align:center;font-family:'Noto Serif',Georgia,serif;font-size:27px;line-height:34px;color:#7A3F96;margin-bottom:34px">Use your consultation to clarify</span>
+      <CardCarousel client:load cards={consultationCards} desktopColumns={3} />
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:34px">
+      <a href="#lead-form" style="display:inline-flex;align-items:center;justify-content:center;gap:13px;height:54px;padding:0 48px;background:#BDA478;color:#fff;font-weight:600;font-size:14px;letter-spacing:0.300em;text-transform:uppercase;text-decoration:none">
+        <span>Get a Clearer Remodeling Direction <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section style="background:#F6F4F1;padding:84px 40px" class="content-section-padded">
+    <div style="max-width:1080px;margin:0 auto">
+      <h2 style="margin:0 0 52px;text-align:center;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:36px;line-height:45px;color:#5D5D5D;text-wrap:pretty">From Multiple Ideas to a More Coherent Home.</h2>
+      
+      <!-- TIMELINE (Desktop Vertical / Mobile Horizontal Carousel) -->
+      <ProcessTimeline client:load steps={processSteps} />
+
+      <p style="margin:46px auto 0;max-width:840px;text-align:center;font-size:14px;line-height:23px;color:#777">California requires a written home-improvement contract for qualifying projects and requires key items such as scope, payment schedule, permit responsibility, completion date, and written change orders. These protections are a reason to ask better questions—not a reason to sign quickly.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION: HOMES WE HAVE REMODELED -->
+  <section style="width:100%;padding:84px 24px 24px;box-sizing:border-box" class="content-section-padded">
+    <h2 style="margin:0 auto 16px;max-width:820px;text-align:center;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:43px;color:#5D5D5D;text-wrap:pretty">Homes We Have Remodeled</h2>
+    <p style="margin:0 auto 40px;max-width:640px;text-align:center;font-size:16px;line-height:25px">Completed remodeling projects across Los Angeles and the San Fernando Valley.</p>
+
+    <GalleryGrid client:load photos={galleryPhotos}>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:8px">
+          <div style="background:#000 url(/assets/general/thumbs/gal-1.jpeg?v=1) center / cover no-repeat;grid-row:span 2;min-height:620px"></div>
+          <div style="background:#000 url(/assets/general/thumbs/gal-2.jpeg?v=1) center / cover no-repeat"></div>
+          <div style="background:#000 url(/assets/general/thumbs/general-remodeling-ext.jpeg?v=1) center / cover no-repeat;grid-row:span 2"></div>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
+            <div style="background:#000 url(/assets/general/thumbs/gal-3.jpeg?v=2) center / cover no-repeat"></div>
+            <div style="background:#000 url(/assets/general/thumbs/gal-4.jpeg?v=1) center / cover no-repeat"></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:360px;gap:8px">
+          <div style="background:#000 url(/assets/general/g04.webp?v=2k) center / cover no-repeat"></div>
+          <div style="background:#000 url(/assets/general/g05.webp?v=2k) center / cover no-repeat"></div>
+          <div style="background:#000 url(/assets/general/g01.webp?v=2k) center / cover no-repeat"></div>
+        </div>
+      </div>
+    </GalleryGrid>
+
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="max-width:1180px;margin:0 auto;padding:80px 40px" class="content-section-padded">
+    <h2 style="margin:0 auto 52px;max-width:860px;text-align:center;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:43px;color:#5D5D5D;text-wrap:pretty">What Homeowners Say About a More Coordinated Experience.</h2>
+    <TestimonialsCarousel client:load testimonials={testimonialsData} showQuotes={false} />
+  </section>
+
+  <!-- BANNER CTA -->
+  <section style="position:relative;width:100%;height:250px;display:grid;place-items:center;overflow:hidden">
+    <div style="position:absolute;inset:0;background:#000 url(/assets/general/g08.webp) center / cover no-repeat"></div>
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.58)"></div>
+    <a href="#lead-form" style="position:relative;display:inline-flex;align-items:center;justify-content:center;gap:13px;height:56px;padding:0 50px;background:#7A3F96;color:#fff;font-weight:600;font-size:14px;letter-spacing:0.300em;text-transform:uppercase;text-decoration:none">
+      <span>Start My Whole-Home Conversation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
+    </a>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section style="max-width:1180px;margin:0 auto;padding:80px 40px" class="content-section-padded">
+    <h2 style="margin:0 0 40px;text-align:center;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:34px;color:#5D5D5D">Frequently Asked Questions</h2>
+    <div class="faq-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:0 48px">
+      <div style="display:flex;flex-direction:column;border-top:1px solid #B5BCC0">
+        <details style="border-bottom:1px solid #B5BCC0">
+          <summary style="display:flex;align-items:center;gap:18px;padding:20px 2px;cursor:pointer;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:26px;color:#5D5D5D">
+            <span style="flex:1">What types of projects can I discuss in a general remodeling consultation?</span>
+            <span class="faq-plus" style="flex:0 0 auto;font-family:Lato,sans-serif;font-size:22px;color:#7A3F96;transition:transform 200ms cubic-bezier(.25,.1,.25,1)">+</span>
+          </summary>
+          <p style="margin:0;padding:0 44px 22px 2px;font-size:15px;line-height:24px">You can start with one space or a list of connected priorities. Tell us what is no longer working in your home and what you want to improve; the consultation is intended to help define a useful project direction.</p>
+        </details>
+        <details style="border-bottom:1px solid #B5BCC0">
+          <summary style="display:flex;align-items:center;gap:18px;padding:20px 2px;cursor:pointer;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:26px;color:#5D5D5D">
+            <span style="flex:1">How do I avoid misunderstanding the scope or cost of a remodel?</span>
+            <span class="faq-plus" style="flex:0 0 auto;font-family:Lato,sans-serif;font-size:22px;color:#7A3F96;transition:transform 200ms cubic-bezier(.25,.1,.25,1)">+</span>
+          </summary>
+          <p style="margin:0;padding:0 44px 22px 2px;font-size:15px;line-height:24px">Ask for clarity in writing before you commit. The CSLB says a home-improvement contract should describe the work and materials in detail, include a payment schedule, state who will secure permits, identify a completion date, and document approved changes through written change orders.</p>
+        </details>
+        <details style="border-bottom:1px solid #B5BCC0">
+          <summary style="display:flex;align-items:center;gap:18px;padding:20px 2px;cursor:pointer;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:26px;color:#5D5D5D">
+            <span style="flex:1">Do all general remodeling projects need permits?</span>
+            <span class="faq-plus" style="flex:0 0 auto;font-family:Lato,sans-serif;font-size:22px;color:#7A3F96;transition:transform 200ms cubic-bezier(.25,.1,.25,1)">+</span>
+          </summary>
+          <p style="margin:0;padding:0 44px 22px 2px;font-size:15px;line-height:24px">It depends on the proposed work and the property’s jurisdiction. LA County lists remodels and renovations, along with new or expanded electrical, mechanical, and plumbing work, among work generally requiring permits.</p>
+        </details>
+      </div>
+      <div style="display:flex;flex-direction:column;border-top:1px solid #B5BCC0">
+        <details style="border-bottom:1px solid #B5BCC0">
+          <summary style="display:flex;align-items:center;gap:18px;padding:20px 2px;cursor:pointer;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:26px;color:#5D5D5D">
+            <span style="flex:1">Can you help if I want to renovate in phases?</span>
+            <span class="faq-plus" style="flex:0 0 auto;font-family:Lato,sans-serif;font-size:22px;color:#7A3F96;transition:transform 200ms cubic-bezier(.25,.1,.25,1)">+</span>
+          </summary>
+          <p style="margin:0;padding:0 44px 22px 2px;font-size:15px;line-height:24px">Bring that priority to the conversation. The first step is to understand which spaces matter most and what should be considered together before work is planned.</p>
+        </details>
+        <details style="border-bottom:1px solid #B5BCC0">
+          <summary style="display:flex;align-items:center;gap:18px;padding:20px 2px;cursor:pointer;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:26px;color:#5D5D5D">
+            <span style="flex:1">Are you licensed?</span>
+            <span class="faq-plus" style="flex:0 0 auto;font-family:Lato,sans-serif;font-size:22px;color:#7A3F96;transition:transform 200ms cubic-bezier(.25,.1,.25,1)">+</span>
+          </summary>
+          <p style="margin:0;padding:0 44px 22px 2px;font-size:15px;line-height:24px">Abraham Building & Consulting lists CSLB License #1046696. California homeowners can independently check a contractor’s license through the CSLB.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section style="position:relative;background:#271D3E">
+    <div style="position:absolute;inset:0;background:url(/assets/general/general-remodeling-new.jpg) center / cover no-repeat;opacity:0.80"></div>
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.46)"></div>
+    <div style="position:relative;max-width:1180px;margin:0 auto;padding:88px 40px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center" class="content-section-padded">
+      <h2 style="margin:0;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:44px;color:#fff">
+        Your Home Does Not Need Five Different Answers.<br />
+        <span style="display:block;margin-top:10px;font-family:'Noto Serif',Georgia,serif;font-style:italic;font-weight:400;font-size:34px;line-height:44px;letter-spacing:0.010em;color:#FDBD2E">It Needs a Better Starting Point</span>
+      </h2>
+      <p style="margin:0;max-width:700px;font-size:17px;line-height:27px;color:rgba(255,255,255,0.88);text-wrap:pretty">Tell us which rooms you want to improve, what is getting in the way today, and where your home is located. We will start with a free whole-home project conversation focused on clarity.</p>
+      <a href="#lead-form" style="display:inline-flex;align-items:center;justify-content:center;gap:13px;height:58px;padding:0 52px;background:#BDA478;color:#fff;font-weight:600;font-size:14px;letter-spacing:0.300em;text-transform:uppercase;text-decoration:none;margin-top:6px">
+        <span>Schedule My Free Remodeling Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
+      </a>
+      <span style="font-size:14px;color:rgba(255,255,255,0.85)">Call <a href="tel:8184573390" style="color:#fff;text-decoration:underline;font-weight:600">(818) 457-3390</a> or submit your project details. No obligation.</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top:2px solid #271D3E;background:#fff;padding:52px 40px 22px">
+    <div style="max-width:640px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px">
+      <img src="/assets/logo-abc-pro.webp" alt="Abraham Building & Consulting" style="width:104px;height:104px;object-fit:contain;display:block" />
+      <span style="font-weight:800;font-size:15px;letter-spacing:0.180em;line-height:22px;color:#777">CSLB License #1046696</span>
+      <p style="margin:0;font-size:13px;line-height:20px;color:#777">At Abraham Building & Consulting, we deliver high-quality home remodeling and construction services in Los Angeles. Owned and managed by a family with over 20 years of industry experience, we are qualified to handle all your renovation needs!</p>
+
+    </div>
+    
+    <p style="margin:36px 0 0;text-align:center;font-size:12px;line-height:20px;color:#777">
+      Abraham Building & Consulting © 2026  |  CSLB License #1046696  |  Privacy Policy  |  Disclaimer
+    </p>
+  </footer>
+
+  <style is:inline>
+    /* ZERO HORIZONTAL OVERFLOW & SAFE BOX SIZING */
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+    }
+    html, body {
+      overflow-x: clip !important;
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      position: relative;
+    }
+
+    /* DESKTOP STYLES (> 1200px) */
+    @media (min-width: 1201px) {
+      .hero-mobile-image-wrap {
+        display: none !important;
+      }
+      .hero-desktop-bg {
+        display: block !important;
+      }
+      .hero-grid-inner {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)) !important;
+        gap: 56px !important;
+        align-items: center !important;
+      }
+      .general-trust-desktop {
+        display: block !important;
+      }
+      .general-trust-mobile {
+        display: none !important;
+      }
+      .btn-rather-talk:hover {
+        background-color: rgba(189, 164, 120, 0.18) !important;
+      }
+    }
+
+    /* MOBILE SPECIFIC STYLES (<= 1200px) based on Documento sin título.md */
+    @media (max-width: 1200px) {
+      /* WORD & CONTAINER OVERFLOW PROTECTION */
+      p, h1, h2, h3, h4, span, a, button, input, textarea {
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+      }
+      .faq-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .split-callout-section,
+      .blueprint-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .top-nav-bar {
+        padding: 10px 16px !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        border-radius: 0 !important;
+      }
+      .nav-logo {
+        width: 64px !important;
+        max-width: 64px !important;
+        height: auto !important;
+        flex-shrink: 0 !important;
+        border-radius: 0 !important;
+      }
+      .nav-phone-text {
+        font-size: 13.5px !important;
+        font-weight: 700 !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        flex: 1 !important;
+      }
+      .nav-call-btn {
+        height: 34px !important;
+        padding: 0 10px !important;
+        font-size: 11px !important;
+        letter-spacing: 0.08em !important;
+        gap: 5px !important;
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        border-radius: 0 !important;
+      }
+
+      /* Hero Section Mobile Order: Image on top, then text + button, then form */
+      .hero-section {
+        min-height: auto !important;
+        background: #271D3E !important;
+      }
+      .hero-desktop-bg {
+        display: none !important;
+      }
+      .hero-overlay {
+        display: none !important;
+      }
+      .hero-container {
+        padding: 0 0 40px 0 !important;
+      }
+      .hero-mobile-image-wrap {
+        display: block !important;
+        width: 100% !important;
+        height: 350px !important;
+        overflow: hidden !important;
+      }
+      .hero-mobile-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+      .hero-grid-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 36px !important;
+        padding: 30px 20px 0 !important;
+      }
+      .hero-text-block {
+        order: 1 !important;
+      }
+      .hero-form-card {
+        order: 2 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      /* Trust Bar on Mobile */
+      .general-trust-desktop {
+        display: none !important;
+      }
+      .general-trust-mobile {
+        display: block !important;
+      }
+
+      /* Padding adjustments */
+      .content-section-padded {
+        padding: 56px 20px !important;
+      }
+      .risk-panel-wrapper {
+        padding-top: 0 !important;
+        min-height: auto !important;
+      }
+      .risk-panel-bg {
+        position: relative !important;
+        height: 240px !important;
+        margin-bottom: -40px !important;
+      }
+      .risk-panel-card {
+        margin-left: 0 !important;
+        max-width: 100% !important;
+        padding: 28px 20px !important;
+      }
+      .split-callout-section {
+        grid-template-columns: 1fr !important;
+      }
+      .conversation-box {
+        padding: 24px 16px !important;
+      }
+      .faq-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+      }
+    }
+  </style>
+
+</Layout>
