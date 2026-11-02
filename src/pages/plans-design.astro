@@ -164,9 +164,6 @@ const testimonialsData = [
             <i class="fa-solid fa-phone" aria-hidden="true" style="font-size:13px"></i>
             <span>Call (818) 457-3390</span>
           </a>
-          <a href="#lead-form" class="cta-gold-btn" style="display:inline-flex;align-items:center;justify-content:center;gap:11px;height:46px;padding:0 30px;background:#BDA478;color:#fff;font-weight:600;font-size:12px;letter-spacing:0.220em;text-transform:uppercase;text-decoration:none;transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
-            <span>Get My Free Planning Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
-          </a>
         </div>
         <DesktopReviewLogos />
 
@@ -181,7 +178,7 @@ const testimonialsData = [
 
       <!-- Mobile-Only Form (Strictly below text & button in Hero per Documento sin título.md) -->
       <div class="hero-mobile-form-wrap">
-        <form class="hero-form-card" data-landing="3d-design" style="background:#F6F4F1;box-shadow:inset 0 0 0 1px #DDDDDD;box-sizing:border-box;padding:34px 32px 30px;display:flex;flex-direction:column;gap:11px;text-align:left;width:100%">
+        <form id="lead-form" class="hero-form-card" data-landing="3d-design" style="background:#F6F4F1;box-shadow:inset 0 0 0 1px #DDDDDD;box-sizing:border-box;padding:34px 32px 30px;display:flex;flex-direction:column;gap:11px;text-align:left;width:100%">
           <h2 style="margin:0 0 4px;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:25px;line-height:31px;color:#7A3F96">Get My Free Planning Consultation</h2>
           <div class="form-row-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:11px;width:100%">
             <input required placeholder="First Name" aria-label="First Name" name="first_name" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
@@ -215,21 +212,7 @@ const testimonialsData = [
       </div>
 
       <!-- Desktop-Only Form in Section 1 (Hidden on Mobile) -->
-      <form id="lead-form" class="section1-desktop-form hero-form-card" data-landing="3d-design" style="background:#F6F4F1;box-shadow:inset 0 0 0 1px #DDDDDD;box-sizing:border-box;padding:34px 32px 30px;display:flex;flex-direction:column;gap:11px;width:100%">
-        <h2 style="margin:0 0 4px;font-family:'Noto Serif',Georgia,serif;font-weight:400;font-size:25px;line-height:31px;color:#7A3F96">Get My Free Planning Consultation</h2>
-        <div class="form-row-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:11px;width:100%">
-          <input required placeholder="First Name" aria-label="First Name" name="first_name" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
-          <input required placeholder="Last Name" aria-label="Last Name" name="last_name" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
-        </div>
-        <input required placeholder="Phone Number" aria-label="Phone Number" type="tel" name="phone" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
-        <input required placeholder="Email" aria-label="Email Address" type="email" name="email" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
-        <input required placeholder="ZIP Code" aria-label="ZIP Code" name="zip" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box" />
-        <textarea rows="3" placeholder="Tell us about your project:" aria-label="Project details" name="message" style="font-family:'Noto Serif',Georgia,serif;font-size:14px;color:#5D5D5D;background:#fff;border:1px solid #B5BCC0;padding:11px 13px;outline:none;width:100%;box-sizing:border-box;resize:vertical"></textarea>
-        <button type="submit" style="height:54px;background:#7A3F96;color:#fff;border:none;font-family:Lato,sans-serif;font-weight:600;font-size:clamp(11px, 2.6vw, 12.5px);letter-spacing:0.10em;text-transform:uppercase;cursor:pointer;width:100%;padding:0 12px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;white-space:nowrap;transition:background-color 200ms cubic-bezier(.25,.1,.25,1)">
-          <span style="display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;gap:8px">Get My Free Planning Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:12.5px;flex-shrink:0;vertical-align:middle;display:inline-block"></i></span>
-        </button>
-        <span style="font-size:12px;line-height:17px;color:#777;text-align:center">No obligation. Let’s talk about your project.</span>
-      </form>
+      
     </div>
   </section>
 
@@ -421,6 +404,28 @@ const testimonialsData = [
       width: 100% !important;
       margin: 0 !important;
       padding: 0 !important;
+    }
+
+
+
+    @media (min-width: 1201px) {
+      .hero-section { min-height: 660px !important; }
+      .hero-container {
+        max-width: 1180px !important;
+        padding: 64px 40px !important;
+        margin: 0 auto;
+        display: grid !important;
+        grid-template-columns: minmax(0, 1.15fr) minmax(340px, 460px);
+        gap: 56px !important;
+        align-items: center !important;
+        text-align: left !important;
+      }
+      .hero-text-block { align-items: flex-start !important; text-align: left !important; min-width: 0; }
+      .hero-overlay { background: linear-gradient(90deg,rgba(39,29,62,0.82) 0%,rgba(39,29,62,0.62) 46%,rgba(39,29,62,0.30) 100%) !important; }
+      .hero-desktop-buttons { justify-content: flex-start !important; }
+      .hero-desktop-buttons .btn-outline-white { height: 52px !important; padding: 0 40px !important; background: #BDA478 !important; box-shadow: none !important; font-size: 14px !important; letter-spacing: 0.300em !important; }
+      .hero-container .hero-mobile-form-wrap { display: block !important; width: 100%; max-width: 460px; justify-self: end; }
+      .hero-mobile-form-wrap .hero-form-card { background: #fff !important; padding: 30px 30px 26px !important; box-shadow: 0 14px 40px rgba(0,0,0,0.30) !important; }
     }
 
     /* DEFAULT DESKTOP BEHAVIOR (> 1200px) */
