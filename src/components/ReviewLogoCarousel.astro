@@ -1,4 +1,10 @@
-<div class="hero-review-marquee" role="img" aria-label="Google, Yelp, BBB and Nextdoor">
+---
+import ReviewLogoCaption from './ReviewLogoCaption.astro';
+interface Props { caption?: string; }
+const { caption } = Astro.props;
+---
+<div class="hero-review-marquee" role="group" aria-label="Google, Yelp, BBB and Nextdoor">
+            <div class="hero-review-caption"><ReviewLogoCaption text={caption} /></div>
             <div class="hero-review-track" aria-hidden="true">
               {[0, 1].map(() => (
                 <div class="hero-review-group">
@@ -23,6 +29,7 @@
         container-type: inline-size;
         padding: 16px 0;
       }
+      .hero-review-caption { margin-bottom: 14px; }
       .hero-review-track {
         display: flex;
         width: max-content;
