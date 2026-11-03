@@ -168,7 +168,7 @@ const testimonialsData = [
             <span>Get My Free Planning Consultation <i class="fa-solid fa-arrow-right" aria-hidden="true" style="font-size:13.5px;margin-left:8px;vertical-align:middle;display:inline-block"></i></span>
           </a>
         </div>
-        <DesktopReviewLogos caption="Trusted for Remodeling Plans & Design" />
+        <div class="planning-review-logos"><DesktopReviewLogos caption="Trusted for Remodeling Plans & Design" /></div>
 
         <!-- Mobile Call Button (Strictly below text in mobile Hero per Documento sin título.md) -->
         <div class="hero-mobile-call-wrap">
@@ -411,6 +411,9 @@ const testimonialsData = [
   </script>
 
   <style is:inline>
+.planning-review-logos { display: none; }
+@media (min-width: 1201px) { .planning-review-logos { display: flex; justify-content: center; width: 100%; transform: translateY(40px); } }
+
     /* ZERO HORIZONTAL OVERFLOW & SAFE BOX SIZING */
     *, *::before, *::after {
       box-sizing: border-box !important;
