@@ -2,440 +2,409 @@
   "hero-interior": {
     "width": 3072,
     "height": 1728,
+    "title": "Detached ADU with poolside patio in Santa Monica",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/hero-interior-provided-480.webp"
+        "url": "/assets/adu/theabcpro-detached-adu-santa-monica-poolside-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/hero-interior-provided-800.webp"
+        "url": "/assets/adu/theabcpro-detached-adu-santa-monica-poolside-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/hero-interior-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-detached-adu-santa-monica-poolside-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/hero-interior-provided-2000.webp"
+        "url": "/assets/adu/theabcpro-detached-adu-santa-monica-poolside-2000.webp"
       },
       {
         "width": 3072,
-        "url": "/assets/adu/hero-interior-provided-3072.webp"
+        "url": "/assets/adu/theabcpro-detached-adu-santa-monica-poolside-3072.webp"
       }
     ],
-    "full": "/assets/adu/hero-interior-provided-3072.webp"
+    "full": "/assets/adu/theabcpro-detached-adu-santa-monica-poolside-3072.webp"
   },
-  "hero": {
+  "mobile-kitchen": {
     "width": 3840,
     "height": 2558,
+    "title": "ADU kitchen design with breakfast bar in Long Beach",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/hero-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-kitchen-long-beach-breakfast-bar-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/hero-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-kitchen-long-beach-breakfast-bar-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/hero-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-kitchen-long-beach-breakfast-bar-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/hero-provided-2000.webp"
+        "url": "/assets/adu/theabcpro-adu-kitchen-long-beach-breakfast-bar-2000.webp"
       },
       {
         "width": 3072,
-        "url": "/assets/adu/hero-provided-3072.webp"
+        "url": "/assets/adu/theabcpro-adu-kitchen-long-beach-breakfast-bar-3072.webp"
       },
       {
         "width": 3840,
-        "url": "/assets/adu/hero-provided-3840.webp"
+        "url": "/assets/adu/theabcpro-adu-kitchen-long-beach-breakfast-bar-3840.webp"
       }
     ],
-    "full": "/assets/adu/hero-provided-3840.webp"
+    "full": "/assets/adu/theabcpro-adu-kitchen-long-beach-breakfast-bar-3840.webp"
   },
   "exterior": {
     "width": 2878,
     "height": 3840,
+    "title": "Detached ADU and private courtyard in Los Angeles",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/exterior-provided-480.webp"
+        "url": "/assets/adu/theabcpro-detached-adu-los-angeles-courtyard-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/exterior-provided-800.webp"
+        "url": "/assets/adu/theabcpro-detached-adu-los-angeles-courtyard-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/exterior-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-detached-adu-los-angeles-courtyard-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/exterior-provided-2000.webp"
+        "url": "/assets/adu/theabcpro-detached-adu-los-angeles-courtyard-2000.webp"
       },
       {
         "width": 2878,
-        "url": "/assets/adu/exterior-provided-2878.webp"
+        "url": "/assets/adu/theabcpro-detached-adu-los-angeles-courtyard-2878.webp"
       }
     ],
-    "full": "/assets/adu/exterior-provided-2878.webp"
+    "full": "/assets/adu/theabcpro-detached-adu-los-angeles-courtyard-2878.webp"
   },
   "kitchen": {
     "width": 1367,
     "height": 2048,
+    "title": "Open-plan ADU kitchen and living space in Santa Monica",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/kitchen-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-santa-monica-open-plan-kitchen-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/kitchen-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-santa-monica-open-plan-kitchen-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/kitchen-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-santa-monica-open-plan-kitchen-1200.webp"
       },
       {
         "width": 1367,
-        "url": "/assets/adu/kitchen-provided-1367.webp"
+        "url": "/assets/adu/theabcpro-adu-santa-monica-open-plan-kitchen-1367.webp"
       }
     ],
-    "full": "/assets/adu/kitchen-provided-1367.webp"
+    "full": "/assets/adu/theabcpro-adu-santa-monica-open-plan-kitchen-1367.webp"
   },
   "entrance": {
     "width": 1367,
     "height": 2048,
+    "title": "Private ADU entrance and pergola in Santa Monica",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/entrance-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-santa-monica-private-entrance-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/entrance-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-santa-monica-private-entrance-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/entrance-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-santa-monica-private-entrance-1200.webp"
       },
       {
         "width": 1367,
-        "url": "/assets/adu/entrance-provided-1367.webp"
+        "url": "/assets/adu/theabcpro-adu-santa-monica-private-entrance-1367.webp"
       }
     ],
-    "full": "/assets/adu/entrance-provided-1367.webp"
+    "full": "/assets/adu/theabcpro-adu-santa-monica-private-entrance-1367.webp"
   },
   "bathroom": {
     "width": 3840,
     "height": 2160,
+    "title": "ADU bathroom with wood vanity in Los Angeles",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/bathroom-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-bathroom-vanity-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/bathroom-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-bathroom-vanity-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/bathroom-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-bathroom-vanity-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/bathroom-provided-2000.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-bathroom-vanity-2000.webp"
       },
       {
         "width": 3072,
-        "url": "/assets/adu/bathroom-provided-3072.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-bathroom-vanity-3072.webp"
       },
       {
         "width": 3840,
-        "url": "/assets/adu/bathroom-provided-3840.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-bathroom-vanity-3840.webp"
       }
     ],
-    "full": "/assets/adu/bathroom-provided-3840.webp"
+    "full": "/assets/adu/theabcpro-adu-los-angeles-bathroom-vanity-3840.webp"
   },
   "bedroom": {
     "width": 3840,
     "height": 2561,
+    "title": "ADU bedroom with wood flooring in Long Beach",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/bedroom-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-long-beach-bedroom-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/bedroom-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-long-beach-bedroom-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/bedroom-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-long-beach-bedroom-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/bedroom-provided-2000.webp"
+        "url": "/assets/adu/theabcpro-adu-long-beach-bedroom-2000.webp"
       },
       {
         "width": 3072,
-        "url": "/assets/adu/bedroom-provided-3072.webp"
+        "url": "/assets/adu/theabcpro-adu-long-beach-bedroom-3072.webp"
       },
       {
         "width": 3840,
-        "url": "/assets/adu/bedroom-provided-3840.webp"
+        "url": "/assets/adu/theabcpro-adu-long-beach-bedroom-3840.webp"
       }
     ],
-    "full": "/assets/adu/bedroom-provided-3840.webp"
+    "full": "/assets/adu/theabcpro-adu-long-beach-bedroom-3840.webp"
   },
   "studio": {
     "width": 3840,
     "height": 2160,
+    "title": "ADU studio kitchen in Los Angeles",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/studio-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-studio-kitchen-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/studio-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-studio-kitchen-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/studio-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-studio-kitchen-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/studio-provided-2000.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-studio-kitchen-2000.webp"
       },
       {
         "width": 3072,
-        "url": "/assets/adu/studio-provided-3072.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-studio-kitchen-3072.webp"
       },
       {
         "width": 3840,
-        "url": "/assets/adu/studio-provided-3840.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-studio-kitchen-3840.webp"
       }
     ],
-    "full": "/assets/adu/studio-provided-3840.webp"
+    "full": "/assets/adu/theabcpro-adu-los-angeles-studio-kitchen-3840.webp"
   },
   "living": {
     "width": 1368,
     "height": 2048,
+    "title": "ADU living space with polished concrete flooring",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/living-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-living-space-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/living-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-living-space-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/living-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-living-space-1200.webp"
       },
       {
         "width": 1368,
-        "url": "/assets/adu/living-provided-1368.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-living-space-1368.webp"
       }
     ],
-    "full": "/assets/adu/living-provided-1368.webp"
+    "full": "/assets/adu/theabcpro-adu-los-angeles-living-space-1368.webp"
   },
   "construction": {
     "width": 1367,
     "height": 2048,
+    "title": "ADU conversion framing in Hollywood Hills",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/construction-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-hollywood-hills-conversion-framing-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/construction-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-hollywood-hills-conversion-framing-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/construction-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-hollywood-hills-conversion-framing-1200.webp"
       },
       {
         "width": 1367,
-        "url": "/assets/adu/construction-provided-1367.webp"
+        "url": "/assets/adu/theabcpro-adu-hollywood-hills-conversion-framing-1367.webp"
       }
     ],
-    "full": "/assets/adu/construction-provided-1367.webp"
+    "full": "/assets/adu/theabcpro-adu-hollywood-hills-conversion-framing-1367.webp"
   },
   "historic-kitchen": {
     "width": 1367,
     "height": 2048,
+    "title": "Completed ADU conversion kitchen in Hollywood Hills",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/historic-kitchen-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-hollywood-hills-completed-kitchen-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/historic-kitchen-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-hollywood-hills-completed-kitchen-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/historic-kitchen-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-hollywood-hills-completed-kitchen-1200.webp"
       },
       {
         "width": 1367,
-        "url": "/assets/adu/historic-kitchen-provided-1367.webp"
+        "url": "/assets/adu/theabcpro-adu-hollywood-hills-completed-kitchen-1367.webp"
       }
     ],
-    "full": "/assets/adu/historic-kitchen-provided-1367.webp"
+    "full": "/assets/adu/theabcpro-adu-hollywood-hills-completed-kitchen-1367.webp"
   },
   "property-review": {
     "width": 1535,
     "height": 2048,
+    "title": "ADU exterior and courtyard for property review",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/property-review-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-property-review-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/property-review-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-property-review-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/property-review-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-property-review-1200.webp"
       },
       {
         "width": 1535,
-        "url": "/assets/adu/property-review-provided-1535.webp"
+        "url": "/assets/adu/theabcpro-adu-los-angeles-property-review-1535.webp"
       }
     ],
-    "full": "/assets/adu/property-review-provided-1535.webp"
-  },
-  "scope-review": {
-    "width": 1367,
-    "height": 2048,
-    "variants": [
-      {
-        "width": 480,
-        "url": "/assets/adu/scope-review-provided-480.webp"
-      },
-      {
-        "width": 800,
-        "url": "/assets/adu/scope-review-provided-800.webp"
-      },
-      {
-        "width": 1200,
-        "url": "/assets/adu/scope-review-provided-1200.webp"
-      },
-      {
-        "width": 1367,
-        "url": "/assets/adu/scope-review-provided-1367.webp"
-      }
-    ],
-    "full": "/assets/adu/scope-review-provided-1367.webp"
-  },
-  "completed-bathroom": {
-    "width": 1368,
-    "height": 2048,
-    "variants": [
-      {
-        "width": 480,
-        "url": "/assets/adu/completed-bathroom-provided-480.webp"
-      },
-      {
-        "width": 800,
-        "url": "/assets/adu/completed-bathroom-provided-800.webp"
-      },
-      {
-        "width": 1200,
-        "url": "/assets/adu/completed-bathroom-provided-1200.webp"
-      },
-      {
-        "width": 1368,
-        "url": "/assets/adu/completed-bathroom-provided-1368.webp"
-      }
-    ],
-    "full": "/assets/adu/completed-bathroom-provided-1368.webp"
-  },
-  "finished-kitchen": {
-    "width": 3840,
-    "height": 2558,
-    "variants": [
-      {
-        "width": 480,
-        "url": "/assets/adu/finished-kitchen-provided-480.webp"
-      },
-      {
-        "width": 800,
-        "url": "/assets/adu/finished-kitchen-provided-800.webp"
-      },
-      {
-        "width": 1200,
-        "url": "/assets/adu/finished-kitchen-provided-1200.webp"
-      },
-      {
-        "width": 2000,
-        "url": "/assets/adu/finished-kitchen-provided-2000.webp"
-      },
-      {
-        "width": 3072,
-        "url": "/assets/adu/finished-kitchen-provided-3072.webp"
-      },
-      {
-        "width": 3840,
-        "url": "/assets/adu/finished-kitchen-provided-3840.webp"
-      }
-    ],
-    "full": "/assets/adu/finished-kitchen-provided-3840.webp"
+    "full": "/assets/adu/theabcpro-adu-los-angeles-property-review-1535.webp"
   },
   "design-review": {
     "width": 1600,
     "height": 1073,
+    "title": "ADU design planning illustration with architectural sketches and visualization",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/design-review-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-design-plans-visualization-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/design-review-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-design-plans-visualization-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/design-review-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-design-plans-visualization-1200.webp"
       },
       {
         "width": 1600,
-        "url": "/assets/adu/design-review-provided-1600.webp"
+        "url": "/assets/adu/theabcpro-adu-design-plans-visualization-1600.webp"
       }
     ],
-    "full": "/assets/adu/design-review-provided-1600.webp"
+    "full": "/assets/adu/theabcpro-adu-design-plans-visualization-1600.webp"
   },
   "build-progress": {
     "width": 1368,
     "height": 2048,
+    "title": "ADU structural framing during construction",
     "variants": [
       {
         "width": 480,
-        "url": "/assets/adu/build-progress-provided-480.webp"
+        "url": "/assets/adu/theabcpro-adu-construction-structural-framing-480.webp"
       },
       {
         "width": 800,
-        "url": "/assets/adu/build-progress-provided-800.webp"
+        "url": "/assets/adu/theabcpro-adu-construction-structural-framing-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/build-progress-provided-1200.webp"
+        "url": "/assets/adu/theabcpro-adu-construction-structural-framing-1200.webp"
       },
       {
         "width": 1368,
-        "url": "/assets/adu/build-progress-provided-1368.webp"
+        "url": "/assets/adu/theabcpro-adu-construction-structural-framing-1368.webp"
       }
     ],
-    "full": "/assets/adu/build-progress-provided-1368.webp"
+    "full": "/assets/adu/theabcpro-adu-construction-structural-framing-1368.webp"
+  },
+  "finished-kitchen": {
+    "width": 3840,
+    "height": 2558,
+    "title": "Completed ADU kitchen with breakfast bar in Long Beach",
+    "variants": [
+      {
+        "width": 480,
+        "url": "/assets/adu/theabcpro-adu-long-beach-completed-kitchen-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/theabcpro-adu-long-beach-completed-kitchen-800.webp"
+      },
+      {
+        "width": 1200,
+        "url": "/assets/adu/theabcpro-adu-long-beach-completed-kitchen-1200.webp"
+      },
+      {
+        "width": 2000,
+        "url": "/assets/adu/theabcpro-adu-long-beach-completed-kitchen-2000.webp"
+      },
+      {
+        "width": 3072,
+        "url": "/assets/adu/theabcpro-adu-long-beach-completed-kitchen-3072.webp"
+      },
+      {
+        "width": 3840,
+        "url": "/assets/adu/theabcpro-adu-long-beach-completed-kitchen-3840.webp"
+      }
+    ],
+    "full": "/assets/adu/theabcpro-adu-long-beach-completed-kitchen-3840.webp"
   }
 }

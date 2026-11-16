@@ -5,4 +5,4 @@ const {name,alt,class:className,eager=false,sizes='100vw'}=Astro.props;
 const photo=photos[name as keyof typeof photos];
 const base=import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
-<img class={className} data-photo-name={name} src={`${base}${photo.full}`} srcset={photo.variants.map(v=>`${base}${v.url} ${v.width}w`).join(', ')} sizes={sizes} alt={alt} width={photo.width} height={photo.height} loading={eager?'eager':'lazy'} fetchpriority={eager?'high':'auto'} decoding="async" />
+<img class={className} data-photo-name={name} data-service="ADU construction and garage conversions" title={photo.title} src={`${base}${photo.full}`} srcset={photo.variants.map(v=>`${base}${v.url} ${v.width}w`).join(', ')} sizes={sizes} alt={alt} width={photo.width} height={photo.height} loading={eager?'eager':'lazy'} fetchpriority={eager?'high':'auto'} decoding="async" />

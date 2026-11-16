@@ -5,7 +5,7 @@ import Photo from '../components/ADUPhoto.astro';
 import photos from '../data/adu-photos.json';
 import { benefits, types, reasons, steps, reviews, faqs, gallery } from '../data/adu';
 import '../styles/adu.css';
-const brands=[{name:'Google',src:'google.png'},{name:'Yelp',src:'yelp-white.svg'},{name:'Houzz',src:'houzz.png'},{name:'Nextdoor',src:'nextdoor.png'}];
+const brands=[{name:'Google',src:'theabcpro-adu-google-reviews.png'},{name:'Yelp',src:'theabcpro-adu-yelp-reviews.svg'},{name:'Houzz',src:'theabcpro-adu-houzz-reviews.png'},{name:'Nextdoor',src:'theabcpro-adu-nextdoor-reviews.png'}];
 ---
 <Layout title="Local ADU Builders in Los Angeles | TheABCPro" description="Custom ADUs, garage conversions and additions in Los Angeles. Start with a free ADU estimate and 3D design for qualifying projects." preloadImage={photos["hero-interior"].full} ogImage="/assets/og/og-adu.jpg" showStickyBar={true} disableGTM={true}>
  <style is:global>
@@ -17,7 +17,7 @@ const brands=[{name:'Google',src:'google.png'},{name:'Yelp',src:'yelp-white.svg'
  <div class="adu-page">
   <a class="adu-skip" href="#adu-main">Skip to content</a>
   <header class="adu-header">
-   <a class="adu-brand" href="#" aria-label="TheABCPro — Abraham Building & Consulting"><img src="/assets/logo-abc-pro.webp" alt="TheABCPro | Abraham Building & Consulting" width="84" height="84" /></a>
+   <a class="adu-brand" href="#" aria-label="TheABCPro — Abraham Building & Consulting"><img src="/assets/adu/theabcpro-adu-company-logo.webp" alt="TheABCPro | Abraham Building & Consulting" width="84" height="84" /></a>
    <div class="adu-header-actions"><a class="adu-header-phone" href="tel:8184573390">(818) 457-3390</a><a class="adu-btn adu-header-estimate" href="#lead-form">Request My Free Estimate <Icon name="arrow" /></a><a class="adu-btn adu-btn-purple adu-header-call" href="tel:8184573390"><Icon name="phone" /> Call Now</a></div>
   </header>
   <main id="adu-main">
@@ -55,6 +55,7 @@ const brands=[{name:'Google',src:'google.png'},{name:'Yelp',src:'yelp-white.svg'
      </div>
     </div>
    </section>
+   <div class="adu-mobile-interior"><Photo name="mobile-kitchen" alt="Long Beach ADU kitchen with white cabinets, a marble-look breakfast bar and pendant lighting" width={3840} height={2558} sizes="(max-width:1200px) 100vw, 1px" /></div>
    <section class="adu-metrics" aria-label="Experience and credentials"><div class="adu-container adu-metrics-grid">{[{value:'80+',label:'remodeling projects completed'},{value:'40+',label:'years of combined contracting experience'},{value:'35+',label:'5-star Google Reviews'},{value:'25+',label:'trusted and vetted partners'}].map(m=><div><strong>{m.value}</strong><span>{m.label}</span></div>)}</div></section>
    <section class="adu-section adu-gallery-section" aria-labelledby="adu-gallery-title">
     <div class="adu-container"><div class="adu-section-heading"><p class="adu-eyebrow">The possibilities, made real</p><h2 id="adu-gallery-title">See the Space.<br />Understand the Transformation.</h2><p>Explore how a garage or underused part of a property can become a place to live—not just extra square footage.</p></div>
@@ -96,7 +97,7 @@ const brands=[{name:'Google',src:'google.png'},{name:'Yelp',src:'yelp-white.svg'
   </main>
   <footer style="border-top:2px solid #271D3E;background:#fff;padding:52px 40px 22px">
     <div style="max-width:640px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px">
-      <img src="/assets/logo-abc-pro.webp" alt="The ABC Pro" style="width:104px;height:104px;object-fit:contain;display:block" />
+      <img src="/assets/adu/theabcpro-adu-company-logo.webp" alt="The ABC Pro" style="width:104px;height:104px;object-fit:contain;display:block" />
       <span style="font-weight:800;font-size:15px;letter-spacing:0.180em;line-height:22px;color:#777">CSLB License #1046696</span>
       <p style="margin:0;font-size:13px;line-height:20px;color:#777">At Abraham Building & Consulting, we deliver high-quality home remodeling and construction services in Los Angeles. Owned and managed by a family with over 20 years of industry experience, we are qualified to handle all your renovation needs!</p>
 
