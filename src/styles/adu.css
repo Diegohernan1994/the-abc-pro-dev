@@ -39,6 +39,20 @@
 .adu-hero-overlay { position:absolute; inset:0; background:linear-gradient(90deg,rgba(39,29,62,.82) 0%,rgba(39,29,62,.62) 46%,rgba(39,29,62,.30) 100%); }
 .adu-hero-grid { position:relative; display:grid; grid-template-columns:1.15fr .85fr; gap:76px; padding-block:66px; align-items:center; }
 .adu-hero-copy { color:rgba(255,255,255,.92); }
+.adu-page .adu-hero-cta { position:relative; isolation:isolate; overflow:hidden; box-shadow:0 8px 24px #0002; transition:transform .25s ease,box-shadow .25s ease,background .25s ease; }
+.adu-hero-cta > span,.adu-hero-cta > svg { position:relative; z-index:1; }
+.adu-hero-cta::before { content:''; position:absolute; inset:-40% auto -40% -70%; width:45%; background:linear-gradient(90deg,transparent,#fff9,transparent); transform:skewX(-24deg); pointer-events:none; }
+.adu-page .adu-hero-cta:hover,.adu-page .adu-hero-cta:focus-visible { transform:translateY(-4px) scale(1.025); box-shadow:0 12px 32px #bda47866,0 0 0 4px #bda47826; }
+.adu-page .adu-hero-cta:active { transform:translateY(-1px) scale(.99); }
+@media(prefers-reduced-motion:no-preference){
+ .adu-hero-cta.adu-cta-visible { animation:adu-hero-cta-glow 1.4s ease-in-out .8s 2; }
+ .adu-hero-cta.adu-cta-visible::before { animation:adu-hero-cta-shine 3.8s ease-in-out .8s 1; }
+ .adu-hero-cta:hover::before { animation:adu-hero-cta-shine-hover .75s ease-out; }
+}
+@keyframes adu-hero-cta-glow { 0%,100%{box-shadow:0 8px 24px #0002;}50%{box-shadow:0 10px 34px #bda47888,0 0 0 5px #bda47826;} }
+@keyframes adu-hero-cta-shine { 0%,18%{left:-70%;}48%,100%{left:140%;} }
+@keyframes adu-hero-cta-shine-hover { from{left:-70%;}to{left:140%;} }
+@media(prefers-reduced-motion:reduce){.adu-page .adu-hero-cta:hover,.adu-page .adu-hero-cta:focus-visible,.adu-page .adu-hero-cta:active{transform:none;} }
 .adu-hero-copy h1 { color:#fff; margin-bottom:24px; }
 .adu-hero .adu-eyebrow { color:var(--adu-bright); font-size:10px; letter-spacing:2px; }
 .adu-hero-intro { max-width:610px; font-size:15px; line-height:1.7; }
