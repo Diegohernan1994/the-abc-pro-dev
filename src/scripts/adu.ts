@@ -1,4 +1,5 @@
 import './adu-types-carousel';
+import './adu-scroll-reveal';
 
 const form = document.querySelector<HTMLFormElement>('[data-adu-form]');
 const isLocal = ['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname);

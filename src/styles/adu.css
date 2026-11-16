@@ -191,6 +191,7 @@
 .adu-lightbox-prev { left:12px; }.adu-lightbox-next { right:12px; }
 @media(min-width:1600px){.adu-hero-grid{padding-block:80px;}.adu-hero-intro{font-size:16px;}.adu-hero-copy h1{font-size:60px;}}
 @media(max-width:1200px){
+ .adu-hero-intro { display:none; }
  .adu-mobile-interior { display:block; background:var(--adu-navy); }
  .adu-mobile-interior img { display:block; width:100%; height:auto!important; }
  .adu-header{padding:10px 24px;min-height:88px;}.adu-brand img{width:68px;height:68px;}.adu-page .adu-header .adu-header-estimate{display:none!important;}
