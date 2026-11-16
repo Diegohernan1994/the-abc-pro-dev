@@ -133,6 +133,8 @@
 .adu-process-grid h3 { font-size:23px; margin-bottom:14px; }
 .adu-process-grid p { font-size:14px; }
 .adu-testimonial-track { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.adu-testimonial-platforms { display:flex; justify-content:center; align-items:center; gap:32px; margin:-8px 0 36px; }
+.adu-testimonial-platforms img { display:block; width:110px; height:40px!important; object-fit:contain; }
 .adu-testimonial { padding:30px; background:var(--adu-paper); border-bottom:2px solid #c0aa84; display:flex; flex-direction:column; }
 .adu-review-top { display:flex; justify-content:space-between; align-items:center; height:40px; }
 .adu-stars { color:#ac8444; font-size:17px; letter-spacing:3px; }
