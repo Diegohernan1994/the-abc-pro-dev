@@ -36,10 +36,10 @@ export const faqs = [
   { question: 'Is financing available?', answer: 'Financing Available. Ask during your consultation about current options; approval and terms depend on lender requirements and your eligibility.' }
 ];
 export const gallery = [
-  { image:'exterior', width:2000,height:1335, title:'Detached ADU', location:'Santa Monica', alt:'Completed detached ADU with a gabled roof and private backyard access in Santa Monica' },
+  { image:'exterior', width:2878,height:3840, title:'Detached ADU', location:'Los Angeles', alt:'Completed detached ADU with a private courtyard and tree-shaded entrance in Los Angeles' },
   { image:'kitchen', width:2000,height:1335,title:'An independent living space',location:'Santa Monica',alt:'Bright open-plan ADU kitchen and living area with white cabinetry and natural wood flooring' },
   { image:'entrance',width:1335,height:2000,title:'A place of your own',location:'Santa Monica',alt:'Private glass entrance and pergola of a completed Santa Monica ADU' },
-  { image:'bathroom',width:1335,height:2000,title:'Everyday comfort',location:'Santa Monica',alt:'Finished ADU bathroom with a glass shower and white vanity' },
-  { image:'bedroom',width:1335,height:2000,title:'Room for your next chapter',location:'Los Angeles',alt:'Finished Los Angeles ADU bedroom with white walls, sliding closet doors and polished concrete flooring' },
+  { image:'bathroom',width:3840,height:2160,title:'Everyday comfort',location:'Los Angeles',alt:'Finished ADU bathroom with a white vanity, wood cabinetry and bright tiled walls' },
+  { image:'bedroom',width:3840,height:2561,title:'Room for your next chapter',location:'Long Beach',alt:'Bright finished ADU bedroom with wood flooring, a large window and white closet doors' },
   { image:'studio',width:1335,height:2000,title:'A fresh start inside',location:'Los Angeles',alt:'Modern ADU studio interior with an efficient white kitchen and polished concrete floor' }
 ];

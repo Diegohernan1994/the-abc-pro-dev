@@ -1,299 +1,395 @@
 {
-  "hero": {
-    "width": 3200,
-    "height": 1954,
+  "hero-interior": {
+    "width": 3072,
+    "height": 1728,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/hero-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/hero-interior-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/hero-interior-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/hero-hq-1200.webp"
+        "url": "/assets/adu/hero-interior-provided-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/hero-hq-2000.webp"
+        "url": "/assets/adu/hero-interior-provided-2000.webp"
       },
       {
-        "width": 3200,
-        "url": "/assets/adu/hero-hq-3200.webp"
+        "width": 3072,
+        "url": "/assets/adu/hero-interior-provided-3072.webp"
       }
     ],
-    "full": "/assets/adu/hero-hq-3200.webp"
+    "full": "/assets/adu/hero-interior-provided-3072.webp"
+  },
+  "hero": {
+    "width": 3840,
+    "height": 2558,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/assets/adu/hero-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/hero-provided-800.webp"
+      },
+      {
+        "width": 1200,
+        "url": "/assets/adu/hero-provided-1200.webp"
+      },
+      {
+        "width": 2000,
+        "url": "/assets/adu/hero-provided-2000.webp"
+      },
+      {
+        "width": 3072,
+        "url": "/assets/adu/hero-provided-3072.webp"
+      },
+      {
+        "width": 3840,
+        "url": "/assets/adu/hero-provided-3840.webp"
+      }
+    ],
+    "full": "/assets/adu/hero-provided-3840.webp"
   },
   "exterior": {
-    "width": 2000,
-    "height": 1335,
+    "width": 2878,
+    "height": 3840,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/exterior-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/exterior-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/exterior-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/exterior-hq-1200.webp"
+        "url": "/assets/adu/exterior-provided-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/exterior-hq-2000.webp"
+        "url": "/assets/adu/exterior-provided-2000.webp"
+      },
+      {
+        "width": 2878,
+        "url": "/assets/adu/exterior-provided-2878.webp"
       }
     ],
-    "full": "/assets/adu/exterior-hq-2000.webp"
+    "full": "/assets/adu/exterior-provided-2878.webp"
   },
   "kitchen": {
-    "width": 2000,
-    "height": 1335,
+    "width": 1367,
+    "height": 2048,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/kitchen-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/kitchen-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/kitchen-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/kitchen-hq-1200.webp"
+        "url": "/assets/adu/kitchen-provided-1200.webp"
       },
       {
-        "width": 2000,
-        "url": "/assets/adu/kitchen-hq-2000.webp"
+        "width": 1367,
+        "url": "/assets/adu/kitchen-provided-1367.webp"
       }
     ],
-    "full": "/assets/adu/kitchen-hq-2000.webp"
-  },
-  "bathroom": {
-    "width": 1335,
-    "height": 2000,
-    "variants": [
-      {
-        "width": 640,
-        "url": "/assets/adu/bathroom-hq-640.webp"
-      },
-      {
-        "width": 1200,
-        "url": "/assets/adu/bathroom-hq-1200.webp"
-      },
-      {
-        "width": 1335,
-        "url": "/assets/adu/bathroom-hq-1335.webp"
-      }
-    ],
-    "full": "/assets/adu/bathroom-hq-1335.webp"
+    "full": "/assets/adu/kitchen-provided-1367.webp"
   },
   "entrance": {
-    "width": 1335,
-    "height": 2000,
+    "width": 1367,
+    "height": 2048,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/entrance-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/entrance-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/entrance-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/entrance-hq-1200.webp"
+        "url": "/assets/adu/entrance-provided-1200.webp"
       },
       {
-        "width": 1335,
-        "url": "/assets/adu/entrance-hq-1335.webp"
+        "width": 1367,
+        "url": "/assets/adu/entrance-provided-1367.webp"
       }
     ],
-    "full": "/assets/adu/entrance-hq-1335.webp"
+    "full": "/assets/adu/entrance-provided-1367.webp"
   },
-  "living": {
-    "width": 3200,
-    "height": 2137,
+  "bathroom": {
+    "width": 3840,
+    "height": 2160,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/living-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/bathroom-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/bathroom-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/living-hq-1200.webp"
+        "url": "/assets/adu/bathroom-provided-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/living-hq-2000.webp"
+        "url": "/assets/adu/bathroom-provided-2000.webp"
       },
       {
-        "width": 3200,
-        "url": "/assets/adu/living-hq-3200.webp"
+        "width": 3072,
+        "url": "/assets/adu/bathroom-provided-3072.webp"
+      },
+      {
+        "width": 3840,
+        "url": "/assets/adu/bathroom-provided-3840.webp"
       }
     ],
-    "full": "/assets/adu/living-hq-3200.webp"
+    "full": "/assets/adu/bathroom-provided-3840.webp"
   },
   "bedroom": {
-    "width": 1335,
-    "height": 2000,
+    "width": 3840,
+    "height": 2561,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/bedroom-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/bedroom-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/bedroom-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/bedroom-hq-1200.webp"
+        "url": "/assets/adu/bedroom-provided-1200.webp"
       },
       {
-        "width": 1335,
-        "url": "/assets/adu/bedroom-hq-1335.webp"
+        "width": 2000,
+        "url": "/assets/adu/bedroom-provided-2000.webp"
+      },
+      {
+        "width": 3072,
+        "url": "/assets/adu/bedroom-provided-3072.webp"
+      },
+      {
+        "width": 3840,
+        "url": "/assets/adu/bedroom-provided-3840.webp"
       }
     ],
-    "full": "/assets/adu/bedroom-hq-1335.webp"
-  },
-  "construction": {
-    "width": 1335,
-    "height": 2000,
-    "variants": [
-      {
-        "width": 640,
-        "url": "/assets/adu/construction-hq-640.webp"
-      },
-      {
-        "width": 1200,
-        "url": "/assets/adu/construction-hq-1200.webp"
-      },
-      {
-        "width": 1335,
-        "url": "/assets/adu/construction-hq-1335.webp"
-      }
-    ],
-    "full": "/assets/adu/construction-hq-1335.webp"
-  },
-  "historic-kitchen": {
-    "width": 1335,
-    "height": 2000,
-    "variants": [
-      {
-        "width": 640,
-        "url": "/assets/adu/historic-kitchen-hq-640.webp"
-      },
-      {
-        "width": 1200,
-        "url": "/assets/adu/historic-kitchen-hq-1200.webp"
-      },
-      {
-        "width": 1335,
-        "url": "/assets/adu/historic-kitchen-hq-1335.webp"
-      }
-    ],
-    "full": "/assets/adu/historic-kitchen-hq-1335.webp"
+    "full": "/assets/adu/bedroom-provided-3840.webp"
   },
   "studio": {
-    "width": 1335,
-    "height": 2000,
+    "width": 3840,
+    "height": 2160,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/studio-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/studio-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/studio-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/studio-hq-1200.webp"
-      },
-      {
-        "width": 1335,
-        "url": "/assets/adu/studio-hq-1335.webp"
-      }
-    ],
-    "full": "/assets/adu/studio-hq-1335.webp"
-  },
-  "finished-kitchen": {
-    "width": 2000,
-    "height": 1335,
-    "variants": [
-      {
-        "width": 640,
-        "url": "/assets/adu/finished-kitchen-hq-640.webp"
-      },
-      {
-        "width": 1200,
-        "url": "/assets/adu/finished-kitchen-hq-1200.webp"
+        "url": "/assets/adu/studio-provided-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/finished-kitchen-hq-2000.webp"
+        "url": "/assets/adu/studio-provided-2000.webp"
+      },
+      {
+        "width": 3072,
+        "url": "/assets/adu/studio-provided-3072.webp"
+      },
+      {
+        "width": 3840,
+        "url": "/assets/adu/studio-provided-3840.webp"
       }
     ],
-    "full": "/assets/adu/finished-kitchen-hq-2000.webp"
+    "full": "/assets/adu/studio-provided-3840.webp"
+  },
+  "living": {
+    "width": 1368,
+    "height": 2048,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/assets/adu/living-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/living-provided-800.webp"
+      },
+      {
+        "width": 1200,
+        "url": "/assets/adu/living-provided-1200.webp"
+      },
+      {
+        "width": 1368,
+        "url": "/assets/adu/living-provided-1368.webp"
+      }
+    ],
+    "full": "/assets/adu/living-provided-1368.webp"
+  },
+  "construction": {
+    "width": 1367,
+    "height": 2048,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/assets/adu/construction-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/construction-provided-800.webp"
+      },
+      {
+        "width": 1200,
+        "url": "/assets/adu/construction-provided-1200.webp"
+      },
+      {
+        "width": 1367,
+        "url": "/assets/adu/construction-provided-1367.webp"
+      }
+    ],
+    "full": "/assets/adu/construction-provided-1367.webp"
+  },
+  "historic-kitchen": {
+    "width": 1367,
+    "height": 2048,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/assets/adu/historic-kitchen-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/historic-kitchen-provided-800.webp"
+      },
+      {
+        "width": 1200,
+        "url": "/assets/adu/historic-kitchen-provided-1200.webp"
+      },
+      {
+        "width": 1367,
+        "url": "/assets/adu/historic-kitchen-provided-1367.webp"
+      }
+    ],
+    "full": "/assets/adu/historic-kitchen-provided-1367.webp"
   },
   "property-review": {
-    "width": 1335,
-    "height": 2000,
+    "width": 1535,
+    "height": 2048,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/property-review-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/property-review-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/property-review-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/property-review-hq-1200.webp"
+        "url": "/assets/adu/property-review-provided-1200.webp"
       },
       {
-        "width": 1335,
-        "url": "/assets/adu/property-review-hq-1335.webp"
+        "width": 1535,
+        "url": "/assets/adu/property-review-provided-1535.webp"
       }
     ],
-    "full": "/assets/adu/property-review-hq-1335.webp"
+    "full": "/assets/adu/property-review-provided-1535.webp"
   },
   "scope-review": {
-    "width": 1335,
-    "height": 2000,
+    "width": 1367,
+    "height": 2048,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/scope-review-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/scope-review-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/scope-review-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/scope-review-hq-1200.webp"
+        "url": "/assets/adu/scope-review-provided-1200.webp"
       },
       {
-        "width": 1335,
-        "url": "/assets/adu/scope-review-hq-1335.webp"
+        "width": 1367,
+        "url": "/assets/adu/scope-review-provided-1367.webp"
       }
     ],
-    "full": "/assets/adu/scope-review-hq-1335.webp"
+    "full": "/assets/adu/scope-review-provided-1367.webp"
   },
   "completed-bathroom": {
-    "width": 1336,
-    "height": 2000,
+    "width": 1368,
+    "height": 2048,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/completed-bathroom-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/completed-bathroom-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/completed-bathroom-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/completed-bathroom-hq-1200.webp"
+        "url": "/assets/adu/completed-bathroom-provided-1200.webp"
       },
       {
-        "width": 1336,
-        "url": "/assets/adu/completed-bathroom-hq-1336.webp"
+        "width": 1368,
+        "url": "/assets/adu/completed-bathroom-provided-1368.webp"
       }
     ],
-    "full": "/assets/adu/completed-bathroom-hq-1336.webp"
+    "full": "/assets/adu/completed-bathroom-provided-1368.webp"
   },
-  "hero-interior": {
-    "width": 3200,
-    "height": 2133,
+  "finished-kitchen": {
+    "width": 3840,
+    "height": 2558,
     "variants": [
       {
-        "width": 640,
-        "url": "/assets/adu/hero-interior-hq-640.webp"
+        "width": 480,
+        "url": "/assets/adu/finished-kitchen-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/finished-kitchen-provided-800.webp"
       },
       {
         "width": 1200,
-        "url": "/assets/adu/hero-interior-hq-1200.webp"
+        "url": "/assets/adu/finished-kitchen-provided-1200.webp"
       },
       {
         "width": 2000,
-        "url": "/assets/adu/hero-interior-hq-2000.webp"
+        "url": "/assets/adu/finished-kitchen-provided-2000.webp"
       },
       {
-        "width": 3200,
-        "url": "/assets/adu/hero-interior-hq-3200.webp"
+        "width": 3072,
+        "url": "/assets/adu/finished-kitchen-provided-3072.webp"
+      },
+      {
+        "width": 3840,
+        "url": "/assets/adu/finished-kitchen-provided-3840.webp"
       }
     ],
-    "full": "/assets/adu/hero-interior-hq-3200.webp"
+    "full": "/assets/adu/finished-kitchen-provided-3840.webp"
   }
 }
