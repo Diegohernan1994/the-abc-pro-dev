@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Layout title="ADU Estimate Preview | TheABCPro" description="ADU estimate local preview confirmation." showStickyBar={false} disableGTM={true}>
+ <main class="adu-thanks">
+  <header><a href={`${base}/landing-adu/`}><img src="/assets/logo-abc-pro.webp" alt="TheABCPro | Abraham Building & Consulting" width="100" height="100" /></a></header>
+  <section><p class="eyebrow">Preview complete</p><h1>Your Next Chapter<br />Starts With a Conversation.</h1><div class="divider"></div><p>This is a preview. Your information has not been sent, and no estimate request has been created.</p><a class="call" href="tel:8184573390">Call (818) 457-3390</a><a class="back" href={`${base}/landing-adu/`}>Back to the ADU landing page</a></section>
+  <footer>Abraham Building & Consulting Inc. · CSLB #1046696 · Los Angeles, CA</footer>
+ </main>
+ <style>
+  .adu-thanks{min-height:100dvh;background:linear-gradient(#271d3ee8,#271d3ee8),url('/assets/adu/hero-hq-3200.webp') center/cover;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;color:#e8e2ee;padding:28px 24px;font:400 16px/1.7 Lato,sans-serif;}
+  header img{display:block;}section{max-width:690px;margin:30px 0;}h1{font:400 clamp(32px,4vw,54px)/1.25 'Noto Serif',Georgia,serif;color:#fff;margin:0 0 28px;}.eyebrow{color:#FDBD2E;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:22px;}.divider{height:1px;background:#BDA478;width:70px;margin:0 auto 24px;}section>p:not(.eyebrow){max-width:510px;margin:0 auto 30px;}.call{display:inline-block;background:#BDA478;color:#271D3E;padding:15px 28px;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}.back{display:block;color:#fff;margin-top:25px;font-size:13px;}footer{font-size:10px;line-height:1.8;color:#d5cddd;}@media(max-width:600px){.adu-thanks{padding:22px 20px;}header img{width:80px;height:80px;}section>p:not(.eyebrow){font-size:14px;}}
+ </style>
+</Layout>
