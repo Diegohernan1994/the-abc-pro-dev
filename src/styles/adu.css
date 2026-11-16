@@ -133,8 +133,6 @@
 .adu-process-grid h3 { font-size:23px; margin-bottom:14px; }
 .adu-process-grid p { font-size:14px; }
 .adu-testimonial-track { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-.adu-testimonial-platforms { display:flex; justify-content:center; align-items:center; gap:32px; margin:-8px 0 36px; }
-.adu-testimonial-platforms img { display:block; width:110px; height:40px!important; object-fit:contain; }
 .adu-testimonial { padding:30px; background:var(--adu-paper); border-bottom:2px solid #c0aa84; display:flex; flex-direction:column; }
 .adu-review-top { display:flex; justify-content:space-between; align-items:center; height:40px; }
 .adu-stars { color:#ac8444; font-size:17px; letter-spacing:3px; }
@@ -143,6 +141,7 @@
 .adu-testimonial blockquote { margin:0 0 25px; font:400 20px/1.6 'Noto Serif',serif; color:var(--adu-navy); flex:1; }
 .adu-review-author { display:flex; flex-direction:column; font-size:11px; line-height:1.7; }
 .adu-review-author strong { font-size:14px; color:var(--adu-navy); }
+.adu-review-source-logo { display:block; align-self:flex-start; width:78px; height:36px!important; object-fit:contain; object-position:left center; margin:5px 0; }
 .adu-review-author small { font-size:10px; margin-top:7px; }
 .adu-carousel-controls { display:none; }
 .adu-area { padding:70px 0; background:var(--adu-navy); color:#e1dce6; }
