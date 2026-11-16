@@ -14,9 +14,10 @@ if (!motionPreference.matches && 'IntersectionObserver' in window && 'animate' i
       observer.unobserve(entry.target);
       if (motionPreference.matches) return;
       const animation = entry.target.animate([
-        { opacity: 0, transform: 'translate3d(0, 18px, 0)' },
-        { opacity: 1, transform: 'translate3d(0, 0, 0)' }
-      ], { duration: 550, delay: Math.min(index, 3) * 60, easing: 'cubic-bezier(.2,.65,.3,1)' });
+        { opacity: 0, transform: 'translate3d(0, 56px, 0) scale(.94)', offset: 0 },
+        { opacity: 1, transform: 'translate3d(0, -4px, 0) scale(1)', offset: .8 },
+        { opacity: 1, transform: 'translate3d(0, 0, 0) scale(1)', offset: 1 }
+      ], { duration: 800, delay: Math.min(index, 3) * 90, easing: 'cubic-bezier(.16,.7,.25,1)', fill: 'backwards' });
       running.add(animation);
       animation.finished.then(() => running.delete(animation), () => running.delete(animation));
     });
