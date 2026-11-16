@@ -1,0 +1,29 @@
+[
+  {
+    "id": "cuKQO1XYS2k",
+    "slug": "adu-independence",
+    "label": "ADU Built for Independence",
+    "title": "ADU Built for Independence & Homeowner Testimonial | ADU by ABC Pro",
+    "width": 1280,
+    "height": 720,
+    "poster": "/assets/adu/theabcpro-adu-independence-transformation-video-poster.webp"
+  },
+  {
+    "id": "JPZVe_4bWmI",
+    "slug": "adu-service-bathroom",
+    "label": "Luxury Bathroom Transformation",
+    "title": "Luxury Master Bathroom Remodel & Homeowner Testimonial | Bathroom Transformation by ABC Pro",
+    "width": 1280,
+    "height": 720,
+    "poster": "/assets/adu/theabcpro-adu-service-bathroom-transformation-video-poster.webp"
+  },
+  {
+    "id": "XidhNsywPiM",
+    "slug": "adu-service-beverly-hills-home",
+    "label": "Beverly Hills Home Transformation",
+    "title": "Luxury Beverly Hills Home Remodel | Custom Kitchen, Spa Bathroom & Modern Interior Transformation",
+    "width": 1280,
+    "height": 720,
+    "poster": "/assets/adu/theabcpro-adu-service-beverly-hills-home-transformation-video-poster.webp"
+  }
+]

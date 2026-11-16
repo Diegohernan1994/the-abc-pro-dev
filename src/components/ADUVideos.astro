@@ -1,0 +1,29 @@
+---
+import videos from '../data/adu-videos.json';
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+---
+<section class="adu-section adu-videos" aria-labelledby="adu-videos-title"><div class="adu-container">
+ <div class="adu-section-heading"><p class="adu-eyebrow">From vision to reality</p><h2 id="adu-videos-title">Watch the Transformations</h2></div>
+ <div class="adu-video-carousel"><div class="adu-video-viewport"><div class="adu-video-track">
+  {videos.map((v,i)=><button class="adu-video-card" type="button" data-video-id={v.id} data-video-title={v.title} aria-label={`Play ${v.label}`} aria-haspopup="dialog">
+   <span class="adu-video-poster"><img src={`${base}${v.poster}`} alt={`Video preview: ${v.label}`} title={v.title} width={v.width} height={v.height} loading="lazy" decoding="async" /><span class="adu-video-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg></span></span>
+   <span class="adu-video-caption"><small>Transformation {String(i+1).padStart(2,'0')}</small><strong>{v.label}</strong><span class="adu-video-watch">Watch video <span aria-hidden="true">↗</span></span></span>
+  </button>)}
+ </div></div><div class="adu-video-controls">
+  <button type="button" class="adu-video-prev" aria-label="Previous transformation video">←</button>
+  <div class="adu-video-dots">{videos.map((v,i)=><button type="button" data-video-slide={i} aria-label={`Show ${v.label}`} aria-current={i===0?'true':'false'}></button>)}</div>
+  <button type="button" class="adu-video-next" aria-label="Next transformation video">→</button>
+  <button type="button" class="adu-video-pause" aria-label="Pause automatic transformation videos">Pause</button>
+ </div></div>
+ </div><dialog class="adu-video-dialog" aria-label="Transformation video player"><button type="button" class="adu-video-close" aria-label="Close transformation video">×</button><div class="adu-video-player"></div><p class="adu-video-player-title"></p></dialog>
+</section>
+<style>
+ .adu-videos{background:#f6f4f1;}.adu-video-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
+ .adu-video-card{display:block;width:100%;min-width:0;padding:0;border:0;background:#fff;text-align:left;color:#271d3e;cursor:pointer;}.adu-video-card:focus-visible{outline:3px solid #7a3f96;outline-offset:4px;}
+ .adu-video-poster{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:#271d3e;}.adu-video-poster img{display:block;width:100%;height:100%!important;object-fit:cover;transition:transform .4s ease;}.adu-video-card:hover img{transform:scale(1.04);}
+ .adu-video-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:58px;height:58px;border-radius:50%;color:#fff;background:#7a3f96;box-shadow:0 4px 24px #0004;transition:background .2s;}.adu-video-play svg{width:30px;height:30px;}.adu-video-card:hover .adu-video-play{background:#612086;}
+ .adu-video-caption{display:flex;flex-direction:column;align-items:flex-start;padding:23px;}.adu-video-caption small{font:900 9px/1.5 Lato,sans-serif;color:#7a3f96;letter-spacing:1.5px;text-transform:uppercase;}.adu-video-caption strong{font:400 21px/1.4 'Noto Serif',Georgia,serif;margin:9px 0 18px;}.adu-video-watch{font:700 10px/1.5 Lato,sans-serif;letter-spacing:1px;text-transform:uppercase;color:#7a3f96;}.adu-video-watch span{margin-left:10px;}.adu-video-controls{display:none;}
+ .adu-video-dialog{position:fixed;inset:0;width:min(1000px,94vw,calc(78dvh * 16 / 9));max-height:94dvh;padding:45px 18px 16px;border:0;background:#1f172c;color:#fff;overflow:visible;}.adu-video-dialog::backdrop{background:#110b1bea;}.adu-video-close{position:absolute;top:0;right:0;width:44px;height:44px;border:0;background:transparent;color:#fff;font:32px/1 Lato,sans-serif;cursor:pointer;}.adu-video-player{aspect-ratio:16/9;background:#000;}.adu-video-player :global(iframe){display:block;border:0;width:100%;height:100%;}.adu-video-player-title{margin:12px 0 0;font:400 12px/1.5 Lato,sans-serif;text-align:center;color:#e1dce6;}
+ @media(max-width:1200px){.adu-video-viewport{overflow:hidden;touch-action:pan-y;}.adu-video-track{display:flex;gap:0;transition:transform .4s ease;}.adu-video-card{flex:0 0 100%;}.adu-video-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:24px;}.adu-video-controls button{border:0;background:transparent;color:#7a3f96;cursor:pointer;min-width:32px;min-height:36px;}.adu-video-dots{display:flex;align-items:center;gap:12px;}.adu-video-dots button{min-width:0;min-height:0;width:11px;height:11px;padding:0;border:1px solid #7a3f96;}.adu-video-dots button[aria-current=true]{background:#7a3f96;}.adu-video-controls .adu-video-pause{font:400 11px/1.5 Lato,sans-serif;text-decoration:underline;}}
+ @media(prefers-reduced-motion:reduce){.adu-video-track,.adu-video-poster img,.adu-video-play{transition:none;}}
+</style>

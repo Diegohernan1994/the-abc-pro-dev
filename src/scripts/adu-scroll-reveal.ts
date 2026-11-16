@@ -7,7 +7,7 @@ if (!motionPreference.matches && 'IntersectionObserver' in window && 'animate' i
     '.adu-benefit-photo', '.adu-benefits-list article', '.adu-types-carousel',
     '.adu-story-photos', '.adu-story-copy', '.adu-reasons-grid article',
     '.adu-process-grid article', '.adu-review-carousel', '.adu-area-grid',
-    '.adu-faq-layout > div', '.adu-final-copy'
+    '.adu-faq-layout > div', '.adu-final-copy', '.adu-video-carousel'
   ].join(','));
   const observer = new IntersectionObserver(entries => {
     entries.filter(entry => entry.isIntersecting).forEach((entry, index) => {

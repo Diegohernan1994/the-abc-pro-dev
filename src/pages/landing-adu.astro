@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/ADUIcon.astro';
 import Photo from '../components/ADUPhoto.astro';
+import ADUVideos from '../components/ADUVideos.astro';
 import photos from '../data/adu-photos.json';
 import { benefits, types, reasons, steps, reviews, faqs, gallery } from '../data/adu';
 import '../styles/adu.css';
@@ -83,6 +84,7 @@ const brands=[{name:'Google',src:'theabcpro-adu-google-reviews.png'},{name:'Yelp
     <div class="adu-section-bottom"><p>Not sure which option fits? Tell us how you want to use the space. Feasibility and approvals depend on your property and project.</p><a class="adu-btn adu-btn-purple" href="#lead-form">Request My Free ADU Estimate <Icon name="arrow" /></a></div>
    </div></section>
    <section class="adu-project-story" aria-label="Hollywood Hills ADU conversion"><div class="adu-story-photos"><figure><Photo name="construction" alt="Wood framing during the Hollywood Hills historic structure ADU conversion" width={1335} height={2000} /><figcaption>During construction</figcaption></figure><figure><Photo name="historic-kitchen" alt="Completed kitchen in the converted Hollywood Hills ADU, with white cabinets and dark floor tiles" width={1335} height={2000} /><figcaption>Completed interior</figcaption></figure></div><div class="adu-story-copy"><p class="adu-eyebrow">Hollywood Hills · ADU conversion</p><h2>Have a similar project in mind?</h2><p>Tell us about your property.</p><a class="adu-btn adu-btn-gold" href="#lead-form">Request My Free ADU Estimate <Icon name="arrow" /></a></div></section>
+   <ADUVideos />
    <section class="adu-section adu-why" aria-labelledby="adu-why-title"><div class="adu-container"><div class="adu-section-heading"><p class="adu-eyebrow">TheABCPro difference</p><h2 id="adu-why-title">Choose an ADU Team.<br />Not Another Project to Manage.</h2><p>Your ADU needs more than a floor plan. It needs design decisions, permit requirements, and construction work that move together. TheABCPro keeps those stages coordinated so you are not left managing the handoffs yourself.</p></div>
     <div class="adu-reasons-grid">{reasons.map((r,i)=><article><span class="adu-reason-number">0{i+1}</span><Icon name={r.icon} /><h3>{r.title}</h3><p>{r.text}</p></article>)}</div><div class="adu-section-bottom"><a class="adu-btn adu-btn-purple" href="#lead-form">Request My Free ADU Estimate <Icon name="arrow" /></a><p class="adu-small">Understand the project before you commit to construction.</p></div>
    </div></section>
