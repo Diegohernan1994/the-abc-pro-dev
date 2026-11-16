@@ -391,5 +391,51 @@
       }
     ],
     "full": "/assets/adu/finished-kitchen-provided-3840.webp"
+  },
+  "design-review": {
+    "width": 1600,
+    "height": 1073,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/assets/adu/design-review-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/design-review-provided-800.webp"
+      },
+      {
+        "width": 1200,
+        "url": "/assets/adu/design-review-provided-1200.webp"
+      },
+      {
+        "width": 1600,
+        "url": "/assets/adu/design-review-provided-1600.webp"
+      }
+    ],
+    "full": "/assets/adu/design-review-provided-1600.webp"
+  },
+  "build-progress": {
+    "width": 1368,
+    "height": 2048,
+    "variants": [
+      {
+        "width": 480,
+        "url": "/assets/adu/build-progress-provided-480.webp"
+      },
+      {
+        "width": 800,
+        "url": "/assets/adu/build-progress-provided-800.webp"
+      },
+      {
+        "width": 1200,
+        "url": "/assets/adu/build-progress-provided-1200.webp"
+      },
+      {
+        "width": 1368,
+        "url": "/assets/adu/build-progress-provided-1368.webp"
+      }
+    ],
+    "full": "/assets/adu/build-progress-provided-1368.webp"
   }
 }

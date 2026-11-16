@@ -17,9 +17,9 @@ export const reasons = [
   { icon: 'home', title: 'A Project Built Around Your Property', text: 'Your garage, backyard, access, utilities, and intended use shape the scope. Start with an estimate conversation about your actual home—not a generic promise about what every ADU should cost or earn.' }
 ];
 export const steps = [
-  { title: 'Tell Us About Your Property', text: 'Request your free estimate. We’ll discuss the ADU type, how you want to use the space, and what needs to be reviewed at your property.', image: 'property-review', width: 1335, height: 2000 },
-  { title: 'Review the Design and Scope', text: 'Explore your direction with 3D visualization and discuss the scope that informs your estimate. We’ll identify the planning and permit steps relevant to the proposed work.', image: 'scope-review', width: 1335, height: 2000 },
-  { title: 'Build With the Plan in Place', text: 'Once the scope is agreed and required approvals are in place, construction moves forward with the project coordinated through to your final walkthrough.', image: 'completed-bathroom', width: 1335, height: 2000 }
+  { title: 'Tell Us About Your Property', text: 'Request your free estimate. We’ll discuss the ADU type, how you want to use the space, and what needs to be reviewed at your property.', image: 'property-review', alt: 'Detached ADU and its private courtyard in Los Angeles', width: 1335, height: 2000 },
+  { title: 'Review the Design and Scope', text: 'Explore your direction with 3D visualization and discuss the scope that informs your estimate. We’ll identify the planning and permit steps relevant to the proposed work.', image: 'design-review', alt: 'Illustration combining architectural sketches and an interior visualization to explain design planning', width: 1600, height: 1073 },
+  { title: 'Build With the Plan in Place', text: 'Once the scope is agreed and required approvals are in place, construction moves forward with the project coordinated through to your final walkthrough.', image: 'build-progress', alt: 'Exposed wood framing and structural work during an ADU conversion under construction', width: 1368, height: 2048 }
 ];
 export const reviews = [
   { type: 'Garage Conversion ADU', quote: '“The team transformed my garage into a beautiful ADU that perfectly fit my vision.”', name: 'Allysia H.', date: 'January 25, 2026', location: 'Northridge, San Fernando Valley, CA' },
